@@ -13,13 +13,13 @@
 	<header>
 		<div class="container">
 			<div id="logo">
-				<h1><img src="piratebox-logo-horizontal-white.png" alt="PirateBox"></h1>
+				<h1><a href="/"><img src="piratebox-logo-horizontal-white.png" alt="PirateBox"></a></h1>
 			</div>
 			<!-- Optional Links! -->
 			<!--
 			<nav id="top-nav">
 				<ul>
-					<li><a href="#">Link 1</a></li>
+					<li><a href="board/">Forum</a></li>
 					<li><a href="#">Link 2</a></li>
 					<li><a href="#">Link 3</a></li>
 				</ul>
@@ -39,7 +39,7 @@
 
 	<section>
 		<div class="container">
-			<aside>
+			<div id="sidebar">
 				<div id="upload">
 					<hgroup>
 						<h2>Upload</h2>
@@ -51,40 +51,38 @@
 					<br><br>
 					<h2><a href="/Shared">Browse Files -></a></h2>
 				</div>
-			</aside>
+			</div>
 
-			<section id="articles">
-				<article>
-					<div id="chat">
-						<hgroup>
-							<h2>Chat</h2>
-							<h3>100% Anonymous!</h3>
-						</hgroup>
-						<div id="shoutbox" class="shoutbox_content"></div>
-						<form method="POST" name="psowrte" id="sb_form" >
-							<div id="shoutbox_input">
-								<input id="shoutbox_nickname" type="text" name="name" value="Anonymous" placeholder="Anonymous">
-								<input id="shoutbox_message" type="text" name="data" placeholder="Message...">
-								<input id="shoutbox_submit" type="submit" name="submit" value="Send">
-							</div>
-							
-							<div id="shoutbox_options">
-								<p>Choose a color:</p>
-								<input type="radio" value="def" id="def" name="color" checked>
-									<label for="def">Default</label> | 
-								<input type="radio" value="blue" id="blue" name="color">
-									<label for="blue" class="blue">Blue</label> | 
-								<input type="radio" value="green" id="green" name="color">
-									<label for="green" class="green">Green</label>  | 
-								<input type="radio" value="orange" id="orange" name="color">
-									<label for="orange" class="orange">Orange</label>  | 
-								<input type="radio" value="red" id="red" name="color">
-									<label for="red"class="red">Red</label> 
-							</div>
-						</form>
-					</div>
-				</article>
-			</section>
+			<div id="main">
+				<div id="chat">
+					<hgroup>
+						<h2>Chat</h2>
+						<h3>100% Anonymous!</h3>
+					</hgroup>
+					<div id="shoutbox" class="shoutbox_content"></div>
+					<form method="POST" name="psowrte" id="sb_form" >
+						<div id="shoutbox_input">
+							<input id="shoutbox_nickname" type="text" name="name" value="Anonymous" placeholder="Anonymous">
+							<input id="shoutbox_message" type="text" name="data" placeholder="Message...">
+							<input id="shoutbox_submit" type="submit" name="submit" value="Send">
+						</div>
+						
+						<div id="shoutbox_options">
+							<p>Choose a color:</p>
+							<input type="radio" value="def" id="def" name="color" checked>
+								<label for="def">Default</label> | 
+							<input type="radio" value="blue" id="blue" name="color">
+								<label for="blue" class="blue">Blue</label> | 
+							<input type="radio" value="green" id="green" name="color">
+								<label for="green" class="green">Green</label>  | 
+							<input type="radio" value="orange" id="orange" name="color">
+								<label for="orange" class="orange">Orange</label>  | 
+							<input type="radio" value="red" id="red" name="color">
+								<label for="red"class="red">Red</label> 
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
 	</section>
 

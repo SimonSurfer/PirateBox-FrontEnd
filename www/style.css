@@ -178,38 +178,36 @@ footer {
 			display: block;
 		}
 
-	#articles {
+	#main {
 		float: left;
 		width: 60%;
 	}
 
-		article { }
+		#chat {
+			margin: 0 1em 1em 0;
+		}
 
-			#chat {
-				margin: 0 1em 1em 0;
-			}
+			#shoutbox_input { }
 
-				#shoutbox_input { }
+				#shoutbox_nickname {
+					float: left;
+					margin: 0 1em 0 0;
+					width: 20%;
+				}
 
-					#shoutbox_nickname {
-						float: left;
-						margin: 0 1em 0 0;
-						width: 20%;
-					}
+				#shoutbox_message {
+					float: left;
+					margin: 0;
+					width: 60%;
+				}
 
-					#shoutbox_message {
-						float: left;
-						margin: 0;
-						width: 60%;
-					}
+				#shoutbox_submit {
+					float: right;
+					margin: 0;
+					width: 15%;
+				}
 
-					#shoutbox_submit {
-						float: right;
-						margin: 0;
-						width: 15%;
-					}
-
-	aside {
+	#sidebar {
 		float: right;
 		margin: 0 0 1em;
 		width: 40%;
