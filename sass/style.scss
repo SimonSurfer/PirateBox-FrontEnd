@@ -1,0 +1,240 @@
+//---------------[ Imports ]
+//
+// Compass
+//
+@import 'compass';
+@import 'compass/css3';
+
+// Custom
+@import 'reset';
+@import 'base';
+
+//---------------[ Type ]
+body {
+	color: $black;
+	font-family: sans-serif;
+	@include font(1em, normal, 1.5em, 0);
+}
+
+h1, h2 {
+	@include font(1.3em, bold, auto, 0 0 .25em);
+}
+
+h3 {
+	@include font(1em, bold, auto, 0 0 1em);
+}
+
+p {
+	@include font(1em, normal, 1.4em, 0);
+}
+
+	p + p {
+		margin: 1em 0;
+	}
+
+a {
+	color: $red;
+	text-decoration: none;
+}
+
+.red { color: $chat-red; }
+.green { color: $chat-green; }
+.blue { color: $chat-blue; }
+.orange { color: $chat-orange; }
+
+//---------------[ Structure ]
+//
+// Mobile
+//
+html, body {
+	background: $gray;
+}
+
+.container {
+	padding: 1em;
+	width: 100%;
+}
+
+img {
+	width: 100%;
+}
+
+header, footer {
+	background: $black;
+}
+
+header { }
+	
+	#top-nav {
+		width: 100%;
+	
+		ul {
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		li {
+			display: inline;
+		}
+
+		li a {
+			font-size: 1.5em;
+			margin: 0 .5em;
+		}
+	}
+
+#welcome {
+	background: $white;
+}
+
+#sidebar { }
+
+	#upload, #chat {
+		background: $white;
+		border-radius: 3px;
+		margin: 0 0 1em;
+		padding: 1em;
+		@include box-shadow($dark-gray 0px 3px 0px);
+	}
+
+#main { }
+
+	#chat { }
+
+		#shoutbox {
+		   border: 1px solid $dark-gray;
+		   height: 350px;
+		   overflow: auto;
+		   width: 100%;
+		   @include marpad(0 0 1em, 0 1em);
+		}
+
+			.message {
+				margin: 0 0 .25em;
+			}
+
+				date {
+					color: $dark-gray;
+					font-size: .75em;
+					font-weight: 700;
+				}
+
+				name {
+					font-weight: bold;
+				}
+
+				data {
+					line-height: 1.2em;
+				}
+
+			#shoutbox_input {
+				margin: 0 0 1em;
+			}
+
+				#shoutbox_nickname, #shoutbox_message, #shoutbox_submit {
+					margin: 0 0 1em;
+					width: 100%;
+				}
+
+footer {
+	color: $gray;
+}
+
+input {
+	background-color: $white;
+	border: 1px solid $dark-gray;
+	color: $black;
+	cursor: text;
+	font-size: .75em;
+	height: 2em;
+	padding: 0 .5em;
+	vertical-align: baseline;
+}
+
+input[type=submit] {
+	background: $dark-gray;
+	border: none;
+	color: $white;
+	padding: 0;
+}
+
+input[type=radio] {
+	height: 1.3em;
+	margin: 0 .2em;
+}
+
+//
+// Tablets
+//
+@media screen and (min-width: 769px) { 
+	header { }
+
+		#logo {
+			float: left;
+			margin: 0;
+			width: 60%;
+		}
+
+			#logo img {
+				width: 80%;
+			}
+
+		#top-nav {
+			float: right;
+			margin: 1em 0;
+			width: 40%;
+
+			ul {
+				text-align: left;
+			}
+
+			li a {
+				margin: 0 1em 0 0;
+			}
+		}
+
+	#sidebar {
+		float: right;
+		margin: 0 0 1em;
+		width: 40%;
+	}
+
+	#main {
+		float: left;
+		width: 60%;
+	}
+
+		#chat {
+			margin: 0 1em 1em 0;
+		}
+
+			#shoutbox_input { }
+
+				#shoutbox_nickname {
+					float: left;
+					margin: 0 1em 0 0;
+					width: 20%;
+				}
+
+				#shoutbox_message {
+					float: left;
+					margin: 0;
+					width: 60%;
+				}
+
+				#shoutbox_submit {
+					float: right;
+					margin: 0;
+					width: 15%;
+				}
+}
+
+//
+// Desktop
+//
+@media screen and (min-width: 1025px) {
+	.container {
+		margin: 0 auto;
+		width: 80%;
+	}
+}
