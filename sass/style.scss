@@ -83,58 +83,60 @@ header { }
 		}
 	}
 
-#welcome {
-	background: $white;
+#content { 
+	.container {
+		padding: 1em 0;
+	}
 }
 
-#sidebar { }
+	#sidebar { }
 
-	#upload, #chat {
-		background: $white;
-		border-radius: 3px;
-		margin: 0 0 1em;
-		padding: 1em;
-		@include box-shadow($dark-gray 0px 3px 0px);
-	}
-
-#main { }
-
-	#chat { }
-
-		#shoutbox {
-		   border: 1px solid $dark-gray;
-		   height: 350px;
-		   overflow: auto;
-		   width: 100%;
-		   @include marpad(0 0 1em, 0 1em);
+		#upload, #chat {
+			background: $white;
+			border-radius: 3px;
+			margin: 0 0 1em;
+			padding: 1em;
+			@include box-shadow($dark-gray 0px 3px 0px);
 		}
 
-			.message {
-				margin: 0 0 .25em;
+	#main { }
+
+		#chat { }
+
+			#shoutbox {
+			   border: 1px solid $dark-gray;
+			   height: 350px;
+			   overflow: auto;
+			   width: 100%;
+			   @include marpad(0 0 1em, 0 1em);
 			}
 
-				date {
-					color: $dark-gray;
-					font-size: .75em;
-					font-weight: 700;
+				.message {
+					margin: 0 0 .25em;
 				}
 
-				name {
-					font-weight: bold;
-				}
+					date {
+						color: $dark-gray;
+						font-size: .75em;
+						font-weight: 700;
+					}
 
-				data {
-					line-height: 1.2em;
-				}
+					name {
+						font-weight: bold;
+					}
 
-			#shoutbox_input {
-				margin: 0 0 1em;
-			}
+					data {
+						line-height: 1.2em;
+					}
 
-				#shoutbox_nickname, #shoutbox_message, #shoutbox_submit {
+				#shoutbox_input {
 					margin: 0 0 1em;
-					width: 100%;
 				}
+
+					#shoutbox_nickname, #shoutbox_message, #shoutbox_submit {
+						margin: 0 0 1em;
+						width: 100%;
+					}
 
 footer {
 	color: $gray;
@@ -146,7 +148,7 @@ input {
 	color: $black;
 	cursor: text;
 	font-size: .75em;
-	height: 2em;
+	height: 3em;
 	padding: 0 .5em;
 	vertical-align: baseline;
 }
@@ -193,40 +195,46 @@ input[type=radio] {
 			}
 		}
 
-	#sidebar {
-		float: right;
-		margin: 0 0 1em;
-		width: 40%;
-	}
+	#content {
+		.container {
+			padding: 1em;
+		}
+	 }
 
-	#main {
-		float: left;
-		width: 60%;
-	}
-
-		#chat {
-			margin: 0 1em 1em 0;
+		#sidebar {
+			float: right;
+			margin: 0 0 1em;
+			width: 40%;
 		}
 
-			#shoutbox_input { }
+		#main {
+			float: left;
+			width: 60%;
+		}
 
-				#shoutbox_nickname {
-					float: left;
-					margin: 0 1em 0 0;
-					width: 20%;
-				}
+			#chat {
+				margin: 0 1em 1em 0;
+			}
 
-				#shoutbox_message {
-					float: left;
-					margin: 0;
-					width: 60%;
-				}
+				#shoutbox_input { }
 
-				#shoutbox_submit {
-					float: right;
-					margin: 0;
-					width: 15%;
-				}
+					#shoutbox_nickname {
+						float: left;
+						margin: 0 1em 0 0;
+						width: 20%;
+					}
+
+					#shoutbox_message {
+						float: left;
+						margin: 0;
+						width: 60%;
+					}
+
+					#shoutbox_submit {
+						float: right;
+						margin: 0;
+						width: 15%;
+					}
 }
 
 //

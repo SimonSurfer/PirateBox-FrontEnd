@@ -126,8 +126,8 @@ header, footer {
   margin: 0 .5em;
 }
 
-#welcome {
-  background: white;
+#content .container {
+  padding: 1em 0;
 }
 
 #upload, #chat {
@@ -186,7 +186,7 @@ input {
   color: #1b1d1e;
   cursor: text;
   font-size: .75em;
-  height: 2em;
+  height: 3em;
   padding: 0 .5em;
   vertical-align: baseline;
 }
@@ -224,6 +224,10 @@ input[type=radio] {
   }
   #top-nav li a {
     margin: 0 1em 0 0;
+  }
+
+  #content .container {
+    padding: 1em;
   }
 
   #sidebar {
