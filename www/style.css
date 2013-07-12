@@ -1,3 +1,4 @@
+/* line 1, sass/_reset.scss */
 * {
   overflow: auto;
   -webkit-box-sizing: border-box;
@@ -5,49 +6,53 @@
   box-sizing: border-box;
 }
 
+/* line 8, sass/_reset.scss */
 html, body, div, object, iframe, fieldset {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
+/* line 14, sass/_reset.scss */
 ol, ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+/* line 20, sass/_reset.scss */
 table {
   border-spacing: 0;
   border-collapse: collapse;
 }
 
-header, footer, nav, section, article, hgroup, figure {
+/* line 25, sass/_reset.scss */
+header, footer, footer, nav, section, article, hgroup, figure {
   display: block;
 }
 
+/* line 29, sass/_reset.scss */
 legend {
   display: none;
 }
 
+/* line 33, sass/_reset.scss */
 body {
   font-size: 100%;
   font-family: sans-serif;
 }
 
+/* line 38, sass/_reset.scss */
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
+/* line 13, sass/style.scss */
 body {
   color: #1b1d1e;
-  font-family: sans-serif;
-  font-size: 1em;
-  font-weight: normal;
-  line-height: 1.5em;
-  margin: 0;
 }
 
+/* line 17, sass/style.scss */
 h1, h2 {
   font-size: 1.3em;
   font-weight: bold;
@@ -55,6 +60,7 @@ h1, h2 {
   margin: 0 0 0.25em;
 }
 
+/* line 21, sass/style.scss */
 h3 {
   font-size: 1em;
   font-weight: bold;
@@ -62,84 +68,140 @@ h3 {
   margin: 0 0 1em;
 }
 
+/* line 25, sass/style.scss */
 p {
   font-size: 1em;
   font-weight: normal;
-  line-height: 1.4em;
+  line-height: 1.5em;
   margin: 0;
 }
 
+/* line 29, sass/style.scss */
 p + p {
   margin: 1em 0;
 }
 
+/* line 33, sass/style.scss */
 a {
   color: #ad000b;
   text-decoration: none;
 }
 
+/* line 38, sass/style.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 42, sass/style.scss */
+.current {
+  color: white;
+}
+
+/* line 46, sass/style.scss */
+#top-nav a {
+  font-size: 1.5em;
+  font-weight: normal;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+/* line 50, sass/style.scss */
+input {
+  font-size: .75em;
+}
+
+/* line 54, sass/style.scss */
 .red {
   color: red;
 }
 
+/* line 55, sass/style.scss */
 .green {
   color: green;
 }
 
+/* line 56, sass/style.scss */
 .blue {
   color: blue;
 }
 
+/* line 57, sass/style.scss */
 .orange {
   color: #ff8040;
 }
 
-html, body {
+/* line 60, sass/style.scss */
+html {
   background: #e5e5e5;
 }
 
+/* line 66, sass/style.scss */
 .container {
+  height: 100%;
   padding: 1em;
   width: 100%;
 }
 
+/* line 72, sass/style.scss */
 img {
-  width: 100%;
+  vertical-align: bottom;
 }
 
+/* line 76, sass/style.scss */
 header, footer {
   background: #1b1d1e;
 }
 
+/* line 80, sass/style.scss */
+#logo {
+  float: left;
+}
+
+/* line 84, sass/style.scss */
+#menu-icon {
+  float: right;
+  width: 36px;
+  -webkit-transition: all 0.50s ease-in-out;
+  -moz-transition: all 0.50s ease-in-out;
+  -o-transition: all 0.50s ease-in-out;
+  transition: all 0.50s ease-in-out;
+}
+
+/* line 93, sass/style.scss */
+.rotate {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: all 0.50s ease-in-out;
+  -moz-transition: all 0.50s ease-in-out;
+  -o-transition: all 0.50s ease-in-out;
+  transition: all 0.50s ease-in-out;
+}
+
+/* line 104, sass/style.scss */
 #top-nav {
-  width: 100%;
+  clear: both;
+  display: none;
 }
-#top-nav ul {
-  margin: 0 auto;
-  text-align: center;
-}
-#top-nav li {
-  display: inline;
-}
-#top-nav li a {
-  font-size: 1.5em;
-  margin: 0 .5em;
+/* line 109, sass/style.scss */
+#top-nav ul li a {
+  display: block;
+  padding: 0 0 1em;
 }
 
-#content .container {
-  padding: 1em 0;
-}
-
+/* line 121, sass/style.scss */
 #upload, #chat {
   background: white;
   border-radius: 3px;
-  margin: 0 0 1em;
-  padding: 1em;
   -webkit-box-shadow: #a8a8a8 0px 3px 0px;
   -moz-box-shadow: #a8a8a8 0px 3px 0px;
   box-shadow: #a8a8a8 0px 3px 0px;
+  margin: 0 0 1em;
+  padding: 1em;
 }
 
+/* line 134, sass/style.scss */
 #shoutbox {
   border: 1px solid #a8a8a8;
   height: 350px;
@@ -149,123 +211,103 @@ header, footer {
   padding: 0 1em;
 }
 
-.message {
-  margin: 0 0 .25em;
-}
-
-date {
-  color: #a8a8a8;
-  font-size: .75em;
-  font-weight: 700;
-}
-
-name {
-  font-weight: bold;
-}
-
-data {
-  line-height: 1.2em;
-}
-
-#shoutbox_input {
-  margin: 0 0 1em;
-}
-
-#shoutbox_nickname, #shoutbox_message, #shoutbox_submit {
-  margin: 0 0 1em;
+/* line 143, sass/style.scss */
+#shoutbox-input .nickname, #shoutbox-input .message, #shoutbox-input .submit {
   width: 100%;
 }
 
+/* line 148, sass/style.scss */
 footer {
   color: #e5e5e5;
 }
 
+/* line 156, sass/style.scss */
 input {
-  background-color: white;
   border: 1px solid #a8a8a8;
-  color: #1b1d1e;
-  cursor: text;
-  font-size: .75em;
   height: 3em;
-  padding: 0 .5em;
-  vertical-align: baseline;
+  margin: 0 0 1em;
+  padding: 0 0.5em;
 }
 
+/* line 162, sass/style.scss */
 input[type=submit] {
   background: #a8a8a8;
-  border: none;
   color: white;
-  padding: 0;
 }
 
+/* line 167, sass/style.scss */
 input[type=radio] {
   height: 1.3em;
   margin: 0 .2em;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 801px) {
+  /* line 175, sass/style.scss */
+  .container {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+  }
+
+  /* line 181, sass/style.scss */
   #logo {
-    float: left;
-    margin: 0;
-    width: 60%;
+    margin: 0 2em 0 0;
   }
 
-  #logo img {
-    width: 80%;
+  /* line 185, sass/style.scss */
+  #menu-icon {
+    display: none;
   }
 
+  /* line 189, sass/style.scss */
   #top-nav {
-    float: right;
-    margin: 1em 0;
-    width: 40%;
+    clear: none;
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
   }
-  #top-nav ul {
-    text-align: left;
+  /* line 195, sass/style.scss */
+  #top-nav ul li {
+    float: left;
   }
-  #top-nav li a {
+  /* line 197, sass/style.scss */
+  #top-nav ul li a {
     margin: 0 1em 0 0;
+    padding: 0;
   }
 
-  #content .container {
-    padding: 1em;
-  }
-
+  /* line 204, sass/style.scss */
   #sidebar {
     float: right;
-    margin: 0 0 1em;
     width: 40%;
   }
 
+  /* line 209, sass/style.scss */
   #main {
     float: left;
+    padding: 0 1em 0 0;
     width: 60%;
   }
 
-  #chat {
-    margin: 0 1em 1em 0;
-  }
-
-  #shoutbox_nickname {
+  /* line 216, sass/style.scss */
+  #shoutbox-input .nickname {
     float: left;
     margin: 0 1em 0 0;
     width: 20%;
   }
-
-  #shoutbox_message {
+  /* line 222, sass/style.scss */
+  #shoutbox-input .message {
     float: left;
-    margin: 0;
     width: 60%;
   }
-
-  #shoutbox_submit {
+  /* line 227, sass/style.scss */
+  #shoutbox-input .submit {
     float: right;
-    margin: 0;
     width: 15%;
   }
-}
-@media screen and (min-width: 1025px) {
-  .container {
-    margin: 0 auto;
-    width: 80%;
+
+  /* line 233, sass/style.scss */
+  .to-top {
+    display: none;
   }
 }

@@ -11,11 +11,13 @@ $chat-blue: 	rgb(0,0,255);
 $chat-orange: 	rgb(255,128,64);
 
 //---------------[ Mixins ]
+// Margin and Padding
 @mixin marpad($margin, $padding) {
 	margin: $margin;
 	padding: $padding;
 }
 
+// All Things Font
 @mixin font($size, $weight, $line, $margin) {
 	font-size: $size;
 	font-weight: $weight;
