@@ -41,14 +41,14 @@ $(document).ready(function() {
 
     // Detects window size 
     // Creating solutions for non-existent problems?
-    $(window).resize(function() {
-        if ($(this).width() > 799 ) {
-            $('#top-nav').show();
-            $('#menu-icon').removeClass('rotate');
-        } else {
-            $('#top-nav').hide();
-        }
-    });
+    // $(window).resize(function() {
+    //     if ($(this).width() > 799 ) {
+    //         $('#top-nav').show();
+    //         $('#menu-icon').removeClass('rotate');
+    //     } else {
+    //         $('#top-nav').hide();
+    //     }
+    // });
     
 
     // smooth scrolling for internal links

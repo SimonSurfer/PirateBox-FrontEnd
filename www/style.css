@@ -1,4 +1,3 @@
-/* line 1, sass/_reset.scss */
 * {
   overflow: auto;
   -webkit-box-sizing: border-box;
@@ -6,53 +5,44 @@
   box-sizing: border-box;
 }
 
-/* line 8, sass/_reset.scss */
 html, body, div, object, iframe, fieldset {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
-/* line 14, sass/_reset.scss */
 ol, ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-/* line 20, sass/_reset.scss */
 table {
   border-spacing: 0;
   border-collapse: collapse;
 }
 
-/* line 25, sass/_reset.scss */
 header, footer, footer, nav, section, article, hgroup, figure {
   display: block;
 }
 
-/* line 29, sass/_reset.scss */
 legend {
   display: none;
 }
 
-/* line 33, sass/_reset.scss */
 body {
   font-size: 100%;
   font-family: sans-serif;
 }
 
-/* line 38, sass/_reset.scss */
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
-/* line 13, sass/style.scss */
 body {
   color: #1b1d1e;
 }
 
-/* line 17, sass/style.scss */
 h1, h2 {
   font-size: 1.3em;
   font-weight: bold;
@@ -60,7 +50,6 @@ h1, h2 {
   margin: 0 0 0.25em;
 }
 
-/* line 21, sass/style.scss */
 h3 {
   font-size: 1em;
   font-weight: bold;
@@ -68,7 +57,6 @@ h3 {
   margin: 0 0 1em;
 }
 
-/* line 25, sass/style.scss */
 p {
   font-size: 1em;
   font-weight: normal;
@@ -76,28 +64,23 @@ p {
   margin: 0;
 }
 
-/* line 29, sass/style.scss */
 p + p {
   margin: 1em 0;
 }
 
-/* line 33, sass/style.scss */
 a {
   color: #ad000b;
   text-decoration: none;
 }
 
-/* line 38, sass/style.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 42, sass/style.scss */
 .current {
   color: white;
 }
 
-/* line 46, sass/style.scss */
 #top-nav a {
   font-size: 1.5em;
   font-weight: normal;
@@ -105,59 +88,48 @@ a:hover {
   margin: 0;
 }
 
-/* line 50, sass/style.scss */
 input {
   font-size: .75em;
 }
 
-/* line 54, sass/style.scss */
 .red {
   color: red;
 }
 
-/* line 55, sass/style.scss */
 .green {
   color: green;
 }
 
-/* line 56, sass/style.scss */
 .blue {
   color: blue;
 }
 
-/* line 57, sass/style.scss */
 .orange {
   color: #ff8040;
 }
 
-/* line 60, sass/style.scss */
 html {
   background: #e5e5e5;
 }
 
-/* line 66, sass/style.scss */
 .container {
   height: 100%;
   padding: 1em;
   width: 100%;
 }
 
-/* line 72, sass/style.scss */
 img {
   vertical-align: bottom;
 }
 
-/* line 76, sass/style.scss */
 header, footer {
   background: #1b1d1e;
 }
 
-/* line 80, sass/style.scss */
 #logo {
   float: left;
 }
 
-/* line 84, sass/style.scss */
 #menu-icon {
   float: right;
   width: 36px;
@@ -167,7 +139,6 @@ header, footer {
   transition: all 0.50s ease-in-out;
 }
 
-/* line 93, sass/style.scss */
 .rotate {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -179,18 +150,19 @@ header, footer {
   transition: all 0.50s ease-in-out;
 }
 
-/* line 104, sass/style.scss */
 #top-nav {
   clear: both;
   display: none;
 }
-/* line 109, sass/style.scss */
 #top-nav ul li a {
   display: block;
   padding: 0 0 1em;
 }
 
-/* line 121, sass/style.scss */
+#content .container {
+  padding: 1em 0;
+}
+
 #upload, #chat {
   background: white;
   border-radius: 3px;
@@ -201,27 +173,30 @@ header, footer {
   padding: 1em;
 }
 
-/* line 134, sass/style.scss */
 #shoutbox {
   border: 1px solid #a8a8a8;
   height: 350px;
   overflow: auto;
   width: 100%;
   margin: 0 0 1em;
-  padding: 0 1em;
+  padding: 0.5em;
+}
+#shoutbox .message {
+  margin: 0 0 .25em 0;
+}
+#shoutbox .message date {
+  font-size: .625em;
+  color: #a8a8a8;
 }
 
-/* line 143, sass/style.scss */
 #shoutbox-input .nickname, #shoutbox-input .message, #shoutbox-input .submit {
   width: 100%;
 }
 
-/* line 148, sass/style.scss */
 footer {
   color: #e5e5e5;
 }
 
-/* line 156, sass/style.scss */
 input {
   border: 1px solid #a8a8a8;
   height: 3em;
@@ -229,84 +204,74 @@ input {
   padding: 0 0.5em;
 }
 
-/* line 162, sass/style.scss */
 input[type=submit] {
   background: #a8a8a8;
   color: white;
 }
 
-/* line 167, sass/style.scss */
 input[type=radio] {
   height: 1.3em;
   margin: 0 .2em;
 }
 
 @media screen and (min-width: 801px) {
-  /* line 175, sass/style.scss */
   .container {
     margin: 0 auto;
     max-width: 1280px;
     width: 90%;
   }
 
-  /* line 181, sass/style.scss */
   #logo {
     margin: 0 2em 0 0;
   }
 
-  /* line 185, sass/style.scss */
   #menu-icon {
     display: none;
   }
 
-  /* line 189, sass/style.scss */
   #top-nav {
     clear: none;
     display: table-cell;
     vertical-align: middle;
     height: 100%;
   }
-  /* line 195, sass/style.scss */
   #top-nav ul li {
     float: left;
   }
-  /* line 197, sass/style.scss */
   #top-nav ul li a {
     margin: 0 1em 0 0;
     padding: 0;
   }
 
-  /* line 204, sass/style.scss */
   #sidebar {
     float: right;
     width: 40%;
   }
 
-  /* line 209, sass/style.scss */
+  #content .container {
+    padding: 1em 1em;
+  }
+
   #main {
     float: left;
     padding: 0 1em 0 0;
     width: 60%;
   }
 
-  /* line 216, sass/style.scss */
   #shoutbox-input .nickname {
     float: left;
     margin: 0 1em 0 0;
     width: 20%;
   }
-  /* line 222, sass/style.scss */
   #shoutbox-input .message {
     float: left;
     width: 60%;
   }
-  /* line 227, sass/style.scss */
   #shoutbox-input .submit {
     float: right;
     width: 15%;
   }
 
-  /* line 233, sass/style.scss */
   .to-top {
     display: none;
   }

@@ -114,7 +114,11 @@ header {
 		}
 	}
 
-#content {}
+#content {
+	.container {
+		padding: 1em 0;
+	}
+}
 
 	#sidebar {}
 
@@ -136,8 +140,18 @@ header {
 			   	height: 350px;
 			   	overflow: auto;
 			   	width: 100%;
-			   	@include marpad(0 0 1em, 0 1em);
+			   	@include marpad(0 0 1em, .5em);
+				.message {
+					margin: 0 0 .25em 0;
+					date {
+						font-size: .625em;
+						color: $dark-gray;
+					}
+					name{}
+					data{}
+				}	
 			}
+
 
 				#shoutbox-input {
 					.nickname, .message, .submit {
@@ -204,6 +218,12 @@ input[type=radio] {
 	#sidebar {
 		float: right;
 		width: 40%;
+	}
+
+	#content {
+		.container {
+			padding: 1em 1em;
+		}
 	}
 
 	#main {
