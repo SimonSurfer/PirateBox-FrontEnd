@@ -115,7 +115,7 @@ function post_shoutbox () {
 	.success(function() { 
 		refresh_shoutbox(); 
 	});
-	$('#shoutbox_message').val('');
+	$('#shoutbox-input .message').val('');
 }
 
 function display_shoutbox() {
