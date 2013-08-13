@@ -24,3 +24,13 @@ $chat-orange: 	rgb(255,128,64);
 	line-height: $line;
 	margin: $margin;
 }
+
+// Makes things transparent
+@mixin transparent($color, $alpha) {
+  $rgba: rgba($color, $alpha);
+  $ie-hex-str: ie-hex-str($rgba);
+  background-color: transparent;
+  background-color: $rgba;
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+  zoom: 1;
+}

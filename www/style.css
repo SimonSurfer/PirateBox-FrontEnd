@@ -164,7 +164,7 @@ header, footer {
   padding: 1em 0;
 }
 
-#upload, #chat {
+#upload, #chat, #welcome {
   background: white;
   border-radius: 3px;
   -webkit-box-shadow: #a8a8a8 0px 3px 0px;
@@ -196,6 +196,14 @@ header, footer {
 
 footer {
   color: #e5e5e5;
+}
+
+#welcome p {
+  clear: both;
+}
+
+#okay {
+  float: right;
 }
 
 input {

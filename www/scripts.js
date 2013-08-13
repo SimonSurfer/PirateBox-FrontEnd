@@ -39,6 +39,11 @@ $(document).ready(function() {
         }
     });
 
+    // Hides the welcome
+    $('#okay').click(function() {
+        $('#welcome').slideUp();
+    });
+
     // Detects window size 
     // Creating solutions for non-existent problems?
     // $(window).resize(function() {

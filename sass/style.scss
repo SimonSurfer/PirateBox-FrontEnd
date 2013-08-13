@@ -121,19 +121,31 @@ header {
 	}
 }
 
+	#welcome {
+		background: $white;
+		border-radius: 3px;
+		@include box-shadow($dark-gray 0px 3px 0px);
+		@include marpad(0 0 1em, 1em);
+	}
+
+		#okay {
+			float: right;
+		}
+
 	#sidebar {}
 
 		#upload {
-			background: $white;
-			border-radius: 3px;
-			@include box-shadow($dark-gray 0px 3px 0px);
-			@include marpad(0 0 1em, 1em);
+			@extend #welcome;
 		}
+
+			#upload > iframe {
+				border: 1px solid $dark-gray;
+			}
 
 	#main {}
 
 		#chat {
-			@extend #upload;
+			@extend #welcome;
 		}
 
 			#shoutbox {
