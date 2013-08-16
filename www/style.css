@@ -164,7 +164,7 @@ header, footer {
   padding: 1em 0;
 }
 
-#upload, #chat, #welcome {
+#welcome, #upload, #chat {
   background: white;
   border-radius: 3px;
   -webkit-box-shadow: #a8a8a8 0px 3px 0px;
@@ -172,6 +172,14 @@ header, footer {
   box-shadow: #a8a8a8 0px 3px 0px;
   margin: 0 0 1em;
   padding: 1em;
+}
+
+#thanks {
+  float: right;
+}
+
+#upload > iframe {
+  border: 1px solid #a8a8a8;
 }
 
 #shoutbox {
@@ -198,12 +206,12 @@ footer {
   color: #e5e5e5;
 }
 
-#welcome p {
-  clear: both;
-}
-
-#okay {
-  float: right;
+.button {
+  background: #a8a8a8;
+  border: 0;
+  color: white;
+  margin: 0;
+  padding: 1em;
 }
 
 input {
@@ -211,11 +219,6 @@ input {
   height: 3em;
   margin: 0 0 1em;
   padding: 0 0.5em;
-}
-
-input[type=submit] {
-  background: #a8a8a8;
-  color: white;
 }
 
 input[type=radio] {
@@ -276,7 +279,7 @@ input[type=radio] {
     float: left;
     width: 60%;
   }
-  #shoutbox-input .submit {
+  #shoutbox-input .button {
     float: right;
     width: 15%;
   }

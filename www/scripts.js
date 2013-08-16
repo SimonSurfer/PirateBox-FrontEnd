@@ -40,7 +40,7 @@ $(document).ready(function() {
     });
 
     // Hides the welcome
-    $('#okay').click(function() {
+    $('#thanks').click(function() {
         $('#welcome').slideUp();
     });
 

@@ -128,7 +128,7 @@ header {
 		@include marpad(0 0 1em, 1em);
 	}
 
-		#okay {
+		#thanks {
 			float: right;
 		}
 
@@ -180,15 +180,17 @@ footer {
 	.to-top {}
 
 //-------- Inputs
+.button {
+	background: $dark-gray;
+	border: 0;
+	color: $white;
+	@include marpad(0, 1em);
+}
+
 input {
 	border: 1px solid $dark-gray;
 	height: 3em;
 	@include marpad(0 0 1em, 0 .5em);
-}
-
-input[type=submit] {
-	background: $dark-gray;
-	color: $white;
 }
 
 input[type=radio] {
@@ -257,7 +259,7 @@ input[type=radio] {
 				width: 60%;
 			}
 
-			.submit {
+			.button {
 				float: right;
 				width: 15%;
 			}
