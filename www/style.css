@@ -54,7 +54,7 @@ h3 {
   font-size: 1em;
   font-weight: bold;
   line-height: auto;
-  margin: 0 0 1em;
+  margin: 0 0 0.25em;
 }
 
 p {
@@ -106,6 +106,41 @@ input {
 
 .orange {
   color: #ff8040;
+}
+
+.color {
+  border-radius: 3px;
+  color: white;
+  float: left;
+  margin: 0 0.5em 0 0;
+  padding: 0.25em 0.5em;
+}
+.color label {
+  margin: .25em .5em;
+}
+
+.color:last-child {
+  margin-right: 0;
+}
+
+.bg-black {
+  background: #1b1d1e;
+}
+
+.bg-red {
+  background: red;
+}
+
+.bg-green {
+  background: green;
+}
+
+.bg-blue {
+  background: blue;
+}
+
+.bg-orange {
+  background: #ff8040;
 }
 
 html {
@@ -164,26 +199,18 @@ header, footer {
   padding: 1em 0;
 }
 
-#welcome, #upload, #chat {
-  background: white;
-  border-radius: 3px;
-  -webkit-box-shadow: #a8a8a8 0px 3px 0px;
-  -moz-box-shadow: #a8a8a8 0px 3px 0px;
-  box-shadow: #a8a8a8 0px 3px 0px;
-  margin: 0 0 1em;
-  padding: 1em;
-}
-
 #thanks {
   float: right;
 }
 
 #upload > iframe {
   border: 1px solid #a8a8a8;
+  border-radius: 3px;
 }
 
 #shoutbox {
   border: 1px solid #a8a8a8;
+  border-radius: 3px;
   height: 350px;
   overflow: auto;
   width: 100%;
@@ -197,6 +224,13 @@ header, footer {
   font-size: .625em;
   color: #a8a8a8;
 }
+#shoutbox .message name {
+  font-size: .75em;
+  font-weight: bold;
+}
+#shoutbox .message data {
+  font-size: .75em;
+}
 
 #shoutbox-input .nickname, #shoutbox-input .message, #shoutbox-input .submit {
   width: 100%;
@@ -206,16 +240,19 @@ footer {
   color: #e5e5e5;
 }
 
-.button {
-  background: #a8a8a8;
-  border: 0;
-  color: white;
-  margin: 0;
+.card {
+  background: white;
+  border-radius: 3px;
+  -webkit-box-shadow: #a8a8a8 0px 3px 0px;
+  -moz-box-shadow: #a8a8a8 0px 3px 0px;
+  box-shadow: #a8a8a8 0px 3px 0px;
+  margin: 0 0 1em;
   padding: 1em;
 }
 
 input {
   border: 1px solid #a8a8a8;
+  border-radius: 3px;
   height: 3em;
   margin: 0 0 1em;
   padding: 0 0.5em;
@@ -224,6 +261,14 @@ input {
 input[type=radio] {
   height: 1.3em;
   margin: 0 .2em;
+}
+
+.button {
+  background: #a8a8a8;
+  border: 0;
+  color: white;
+  margin: 0;
+  padding: 1em;
 }
 
 @media screen and (min-width: 801px) {

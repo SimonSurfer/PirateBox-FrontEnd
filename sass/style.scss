@@ -19,7 +19,7 @@ h1, h2 {
 }
 
 h3 {
-	@include font(1em, bold, auto, 0 0 1em);
+	@include font(1em, bold, auto, 0 0 .25em);
 }
 
 p {
@@ -55,6 +55,23 @@ input {
 .green { color: $chat-green; }
 .blue { color: $chat-blue; }
 .orange { color: $chat-orange; }
+.color {
+	border-radius: 3px;
+	color: $white;
+	float: left;
+	@include marpad(0 .5em 0 0, .25em .5em);
+	label {
+		margin: .25em .5em;
+	}
+}
+.color:last-child {
+	margin-right: 0;
+}
+.bg-black { background: $black; }
+.bg-red { background: $chat-red; }
+.bg-green { background: $chat-green; }
+.bg-blue { background: $chat-blue; }
+.bg-orange { background: $chat-orange; }
 
 //-------- Structure
 html {
@@ -121,12 +138,7 @@ header {
 	}
 }
 
-	#welcome {
-		background: $white;
-		border-radius: 3px;
-		@include box-shadow($dark-gray 0px 3px 0px);
-		@include marpad(0 0 1em, 1em);
-	}
+	#welcome {}
 
 		#thanks {
 			float: right;
@@ -134,22 +146,20 @@ header {
 
 	#sidebar {}
 
-		#upload {
-			@extend #welcome;
-		}
+		#upload {}
 
 			#upload > iframe {
 				border: 1px solid $dark-gray;
+				border-radius: 3px;
 			}
 
 	#main {}
 
-		#chat {
-			@extend #welcome;
-		}
+		#chat {}
 
 			#shoutbox {
 				border: 1px solid $dark-gray;
+				border-radius: 3px;
 			   	height: 350px;
 			   	overflow: auto;
 			   	width: 100%;
@@ -160,11 +170,17 @@ header {
 						font-size: .625em;
 						color: $dark-gray;
 					}
-					name{}
-					data{}
+
+					name{
+						font-size: .75em;
+						font-weight: bold;
+					}
+
+					data{
+						font-size: .75em;
+					}
 				}	
 			}
-
 
 				#shoutbox-input {
 					.nickname, .message, .submit {
@@ -179,16 +195,17 @@ footer {
 
 	.to-top {}
 
-//-------- Inputs
-.button {
-	background: $dark-gray;
-	border: 0;
-	color: $white;
-	@include marpad(0, 1em);
+.card {
+	background: $white;
+	border-radius: 3px;
+	@include box-shadow($dark-gray 0px 3px 0px);
+	@include marpad(0 0 1em, 1em);
 }
 
+//-------- Inputs
 input {
 	border: 1px solid $dark-gray;
+	border-radius: 3px;
 	height: 3em;
 	@include marpad(0 0 1em, 0 .5em);
 }
@@ -196,6 +213,13 @@ input {
 input[type=radio] {
   height: 1.3em;
   margin: 0 .2em;
+}
+
+.button {
+	background: $dark-gray;
+	border: 0;
+	color: $white;
+	@include marpad(0, 1em);
 }
 
 //----------------[ Desktop ]
