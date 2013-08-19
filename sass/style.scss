@@ -47,7 +47,7 @@ a:hover {
 		@include font(1.5em, normal, 1.5em, 0);
 	}
 
-input {
+input, .color {
 	font-size: .75em;
 }
 
@@ -55,18 +55,6 @@ input {
 .green { color: $chat-green; }
 .blue { color: $chat-blue; }
 .orange { color: $chat-orange; }
-.color {
-	border-radius: 3px;
-	color: $white;
-	float: left;
-	@include marpad(0 .5em 0 0, .25em .5em);
-	label {
-		margin: .25em .5em;
-	}
-}
-.color:last-child {
-	margin-right: 0;
-}
 .bg-black { background: $black; }
 .bg-red { background: $chat-red; }
 .bg-green { background: $chat-green; }
@@ -183,9 +171,21 @@ header {
 			}
 
 				#shoutbox-input {
+					margin: 0 0 1em 0;
 					.nickname, .message, .submit {
 						width: 100%;
 					}
+				}
+
+				.color {
+					border-radius: 3px;
+					color: $white;
+					float: left;
+					@include marpad(0 .5em .5em 0, .25em .5em);
+				}
+
+				.color:last-child {
+					margin-right: 0;
 				}
 
 footer {
@@ -212,12 +212,17 @@ input {
 
 input[type=radio] {
   height: 1.3em;
-  margin: 0 .2em;
+  margin: 0 .5em 0 0;
+}
+
+input[type=submit] {
+	width: 100%;
 }
 
 .button {
 	background: $dark-gray;
 	border: 0;
+	border-radius: 3px;
 	color: $white;
 	@include marpad(0, 1em);
 }
@@ -287,6 +292,10 @@ input[type=radio] {
 				float: right;
 				width: 15%;
 			}
+		}
+
+		.color {
+			margin-bottom: 0;
 		}
 
 	.to-top {

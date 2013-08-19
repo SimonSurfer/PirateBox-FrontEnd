@@ -88,7 +88,7 @@ a:hover {
   margin: 0;
 }
 
-input {
+input, .color {
   font-size: .75em;
 }
 
@@ -106,21 +106,6 @@ input {
 
 .orange {
   color: #ff8040;
-}
-
-.color {
-  border-radius: 3px;
-  color: white;
-  float: left;
-  margin: 0 0.5em 0 0;
-  padding: 0.25em 0.5em;
-}
-.color label {
-  margin: .25em .5em;
-}
-
-.color:last-child {
-  margin-right: 0;
 }
 
 .bg-black {
@@ -232,8 +217,23 @@ header, footer {
   font-size: .75em;
 }
 
+#shoutbox-input {
+  margin: 0 0 1em 0;
+}
 #shoutbox-input .nickname, #shoutbox-input .message, #shoutbox-input .submit {
   width: 100%;
+}
+
+.color {
+  border-radius: 3px;
+  color: white;
+  float: left;
+  margin: 0 0.5em 0.5em 0;
+  padding: 0.25em 0.5em;
+}
+
+.color:last-child {
+  margin-right: 0;
 }
 
 footer {
@@ -260,12 +260,17 @@ input {
 
 input[type=radio] {
   height: 1.3em;
-  margin: 0 .2em;
+  margin: 0 .5em 0 0;
+}
+
+input[type=submit] {
+  width: 100%;
 }
 
 .button {
   background: #a8a8a8;
   border: 0;
+  border-radius: 3px;
   color: white;
   margin: 0;
   padding: 1em;
@@ -327,6 +332,10 @@ input[type=radio] {
   #shoutbox-input .button {
     float: right;
     width: 15%;
+  }
+
+  .color {
+    margin-bottom: 0;
   }
 
   .to-top {
