@@ -9,9 +9,15 @@
 </head>
 <body>
 
-<header id="banner">
+<header id="header">
 	<div class="container">
-		<div id="logo"><img src="piratebox-logo-horizontal-white.png" alt="PirateBox"></div>
+		<div id="logo">
+			<h1>
+				<a href="/">
+					<img src="piratebox-logo-horizontal-white.png" alt="PirateBox" title="PirateBox - Share Freely">
+				</a>
+			</h1>
+		</div>
 		<div id="menu-icon"><img src="menu.png" alt="Menu"></div>
 		<nav id="top-nav">
 			<ul>
@@ -26,40 +32,38 @@
 
 <section id="content">
 	<div class="container">
+		<div id="welcome" class="card">
+			<h2>Welcome</h2>
+			<p>Now, first of all, there is nothing illegal or scary going on here. This is a social place where you can chat and share files with people around you, <strong>anonymously</strong>! This is an off-line network, specially designed and developed for file-sharing and chat services. Staying off the grid is a precaution to maintain your full anonymity. Please have fun, chat with people, and feel free to share any files you may like.</p>
+			<input id="thanks" class="button" type="submit" value="Thanks">
+		</div>
 		<div id="sidebar">
-			<div id="upload">
-				<hgroup>
-					<h2>Upload</h2>
-					<h3>Please do not refresh this page during file upload!</h3>
-				</hgroup>
+			<div id="upload" class="card">
+				<h2>Upload</h2>
 				<iframe width="100%" height="80" src='http://piratebox.lan:8080'>
-					Your browser does not support iframes.. If you want to upload something, follow this <a href='http://piratebox.lan:8080'>Link</a>
+					Your browser does not support iframes.. If you want to upload something, follow this <a href='http://piratebox.lan:8080'>Link</a>.
 				</iframe>
-				<h2><a href="/Shared">Browse Files -></a></h2>
+				<h3><a href="/Shared">Browse Files -></a></h3>
 			</div>
 		</div>
 
 		<div id="main">
-			<div id="chat">
-				<hgroup>
-					<h2>Chat</h2>
-					<h3>100% Anonymous!</h3>
-				</hgroup>
+			<div id="chat" class="card">
+				<h2>Chat</h2>
 				<div id="shoutbox" class="shoutbox_content"></div>
 				<form method="POST" name="psowrte" id="sb_form" >
 					<div id="shoutbox-input">
-						<input class="nickname" type="text" name="name" value="Anonymous" placeholder="Anonymous">
-						<input class="message" type="text" name="data" placeholder="Message...">
-						<input class="submit" type="submit" name="submit" value="Send">
+						<input class="nickname" type="text" 	name="name" 	value="Anonymous" placeholder="Nickname">
+						<input class="message" 	type="text" 	name="data" 	placeholder="Message...">
+						<input class="button" 	type="submit" 	name="submit" 	value="Send">
 					</div>
-					
-					<div id="shoutbox_options">
-						<p>Choose a message color:</p>
-						<input type="radio" value="def" id="def" name="color" checked> <label for="def">Default</label> | 
-						<input type="radio" value="blue" id="blue" name="color"> <label for="blue" class="blue">Blue</label> | 
-						<input type="radio" value="green" id="green" name="color"> <label for="green" class="green">Green</label>  | 
-						<input type="radio" value="orange" id="orange" name="color"> <label for="orange" class="orange">Orange</label>  | 
-						<input type="radio" value="red" id="red" name="color"> <label for="red"class="red">Red</label> 
+					<div id="shoutbox-options">
+						<h3>Text Color:</h3>
+						<label for="def" 	class="bg-black">	<input name="color" type="radio" value="def" 	id="def" checked>Default</label>
+						<label for="blue" 	class="bg-blue">	<input name="color" type="radio" value="blue" 	id="blue"		>Blue</label>
+						<label for="green" 	class="bg-green">	<input name="color" type="radio" value="green" 	id="green"		>Green</label>
+						<label for="orange" class="bg-orange">	<input name="color" type="radio" value="orange" id="orange"		>Orange</label>
+						<label for="red" 	class="bg-red">		<input name="color" type="radio" value="red" 	id="red"		>Red</label>
 					</div>
 				</form>
 			</div>
@@ -67,13 +71,12 @@
 	</div>
 </section>
 
-<footer>
+<footer id="about">
 	<div class="container">
-		<h2 id="about">About PirateBox</h2>
+		<p class="to-top"><a href="#header">Back to top</a></p>
+		<h2>About PirateBox</h2>
 		<p>Inspired by pirate radio and the free culture movment, PirateBox is a self-contained mobile collaboration and file sharing device. PirateBox utilizes Free, Libre and Open Source software (FLOSS) to create mobile wireless file sharing networks where users can anonymously share images, video, audio, documents, and other digital content.</p>
 		<p>PirateBox is designed to be safe and secure. No logins are required and no user data is logged. The system is purposely not connected to the Internet in order to prevent tracking and preserve user privacy.</p>
-		<p class="to-top"><a href="#banner">Back to top</a></p>
-		
 		<small>PirateBox is licensed under GPLv3.</small>
 	</div>
 </footer>
