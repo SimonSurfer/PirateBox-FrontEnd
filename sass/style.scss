@@ -1,257 +1,301 @@
 //----------------[ Includes ]
-//-------- Compass
+//--------[ Compass ]
 @import 'compass';
 @import 'compass/css3';
 
-//-------- Custom
-@import 'reset';
+//--------[ Custom ]
 @import 'base';
-
+@import 'fonts';
 
 //----------------[ Mobile ]
-//-------- Type
-body {
-	color: $black;
-}
+html {}
 
-h1, h2 {
-	@include font(1.3em, bold, auto, 0 0 .25em);
-}
-
-h3 {
-	@include font(1em, bold, auto, 0 0 1em);
-}
-
-p {
-	@include font(1em, normal, 1.5em, 0);
-}
-
-	p + p {
-		margin: 1em 0;
+	body {
+		background: $gray;
 	}
 
-a {
-	color: $red;
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-	.current {
-		color: $white;
-	}
-
-	#top-nav a {
-		@include font(1.5em, normal, 1.5em, 0);
-	}
-
-input {
-	font-size: .75em;
-}
-
-.red { color: $chat-red; }
-.green { color: $chat-green; }
-.blue { color: $chat-blue; }
-.orange { color: $chat-orange; }
-
-//-------- Structure
-html {
-	background: $gray;
-}
-
-body {}
-
-.container {
-	height: 100%;
-	padding: 1em;
-	width: 100%;
-}
-
-img {
-	vertical-align: bottom;
-}
-
-header {
-	background: $black;
-}
-
-	#logo {
-		float: left;
-		overflow: hidden;
-	}
-
-	#menu-icon {
-		float: right;
-		width: 36px;
-		-webkit-transition: all 0.50s ease-in-out;
-		-moz-transition: all 0.50s ease-in-out;
-		-o-transition: all 0.50s ease-in-out;
-		transition: all 0.50s ease-in-out;
-	}
-
-		.rotate {
-			-webkit-transform: rotate(-90deg);
-			-moz-transform: rotate(-90deg);
-			-o-transform: rotate(-90deg);
-			transform: rotate(-90deg);
-			-webkit-transition: all 0.50s ease-in-out;
-			-moz-transition: all 0.50s ease-in-out;
-			-o-transition: all 0.50s ease-in-out;
-			transition: all 0.50s ease-in-out;
-		}
-			
-	#top-nav {
-		clear: both;
-		display: none;
-		ul {
-			li {
-				a {
-					display: block;
-					padding: 0 0 1em;
-				}
+		header {
+			background: $black;
+			img {
+				vertical-align: bottom;
 			}
 		}
-	}
+			#logo {
+				float: left;
+				overflow: hidden;
+			}
+			
+			#menu-icon {
+				float: right;
+				width: 36px;
+				@include transitions(all, 0.50s, ease-in-out);
+			}
 
-#content {
-	.container {
-		padding: 1em 0;
-	}
-}
+				.rotate {
+					@include rotate(-90deg);
+					@include transitions(all, 0.50s, ease-in-out);
+				}
+			
+			#top-nav {
+				clear: both;
+				display: none;
+				padding: 1em 0 0 0;
+				ul {
+					li {
+						a {}
+					}
+				}
+			}
 
-	#sidebar {}
+		#content {}
+			
+			#welcome {}
+				
+				#thanks {
+					float: right;
+				}
 
-		#upload {
+			#sidebar {}
+
+				#upload {
+					iframe {
+						border: $border;
+						border-radius: $radius;
+						margin: 0 0 1em;
+					}
+				}
+
+			#main {}
+
+				#chat {}
+
+					#shoutbox {
+						height: 350px;
+					   	overflow: auto;
+					   	width: 100%;
+					   	border: $border;
+					   	border-radius: $radius;
+					   	@include marpad(0 0 1em, .5em);
+						.message {
+							margin: 0 0 .25em 0;
+						}
+					}
+
+					#sb_form {}
+
+						#shoutbox-input {
+							margin: 0 0 1em 0;
+							.nickname,
+							.message,
+							.button {
+								width: 100%;
+							}
+						}
+
+						#shoutbox-options {
+							label {
+								float: left;
+								overflow: hidden;
+								border-radius: $radius;
+								@include marpad(0 .5em .5em 0, .5em 1em);
+								input {
+									margin: 0 .5em 0 0;
+								}
+							}
+							
+							.bg-black {
+								background: $black;
+							}
+							
+							.bg-blue {
+								background: $chat-blue;
+							}
+							
+							.bg-green {
+								background: $chat-green;
+							}
+							
+							.bg-orange {
+								background: $chat-orange;
+							}
+
+							.bg-red {
+								background: $chat-red;
+							}
+						}
+
+		footer {
+			@extend header;
+		}
+
+			.to-top {}
+
+		input {
+			height: 3em;
+			border: $border;
+			border-radius: $radius;
+			@include marpad(0 0 1em, 0 .5em);
+		}
+
+		input[type=radio] {
+		  	height: 1.3em;
+		  	margin: 0 .5em 0 0;
+		}
+
+		.button {
+			background: $dark-gray;
+			border: 0;
+			color: $white;
+			@include marpad(0, 1em);
+		}
+
+			.button:active {
+				background: darken($dark-gray, 10%);
+				color: darken($white, 20%);
+				@include box-shadow(darken($dark-gray, 30%) 0px -3px 0px inset);
+			}
+
+		.card {
 			background: $white;
-			border-radius: 3px;
+			border-radius: $radius;
 			@include box-shadow($dark-gray 0px 3px 0px);
 			@include marpad(0 0 1em, 1em);
 		}
 
-	#main {}
-
-		#chat {
-			@extend #upload;
+		.container {
+			height: 100%;
+			padding: 1em;
+			width: 100%;
 		}
 
-			#shoutbox {
-				border: 1px solid $dark-gray;
-			   	height: 350px;
-			   	overflow: auto;
-			   	width: 100%;
-			   	@include marpad(0 0 1em, .5em);
-				.message {
-					margin: 0 0 .25em 0;
-					date {
-						font-size: .625em;
-						color: $dark-gray;
+		.list {
+			table {
+				width: 100%;
+				thead {
+					text-align: left;
+				}
+				tbody {
+					tr {
+						height: 2em;
+						vertical-align: middle;
 					}
-					name{}
-					data{}
-				}	
-			}
-
-
-				#shoutbox-input {
-					.nickname, .message, .submit {
-						width: 100%;
+					tr:hover {
+						background: $gray;
 					}
 				}
-
-footer {
-	color: $gray;
-	@extend header;
-}
-
-	.to-top {}
-
-//-------- Inputs
-input {
-	border: 1px solid $dark-gray;
-	height: 3em;
-	@include marpad(0 0 1em, 0 .5em);
-}
-
-input[type=submit] {
-	background: $dark-gray;
-	color: $white;
-}
-
-input[type=radio] {
-  height: 1.3em;
-  margin: 0 .2em;
-}
+				.m, .s, .t {
+					display: none;
+				}
+			}
+		}
 
 //----------------[ Desktop ]
-//-------- Structure
 @media screen and (min-width: 801px) {
-	.container {
-		margin: 0 auto;
-		max-width: 1280px;
-		width: 90%;
-	}
+html {}
 
-	#logo {
-		margin: 0 2em 0 0;
-	}
+	body {}
 
-	#menu-icon {
-		display: none;
-	}
+		header {}
+			#logo {
+				margin: 0 2em 0 0;
+			}
 
-	#top-nav {
-		clear: none;
-		display: table-cell;
-		vertical-align: middle;
-		height: 100%;
-		ul {
-			li {
-				float: left;
-				a {
-					@include marpad(0 1em 0 0, 0)
+			#menu-icon {
+				display: none;
+			}
+			
+			#top-nav {
+				clear: none;
+				display: table-cell;
+				padding: 0;
+				vertical-align: middle;
+				ul {
+					li {
+						float: left;
+						a {
+							@include marpad(0 1em 0 0, 0);
+						}
+					}
 				}
 			}
-		}
-	}
 
-	#sidebar {
-		float: right;
-		width: 40%;
-	}
+		#content {}
+			
+			#welcome {}
+				
+				#thanks {}
 
-	#content {
-		.container {
-			padding: 1em 1em;
-		}
-	}
-
-	#main {
-		float: left;
-		padding: 0 1em 0 0;
-		width: 60%;
-	}
-
-		#shoutbox-input {
-			.nickname {
-				float: left;
-				margin: 0 1em 0 0;
-				width: 20%;
+			#sidebar {
+				float: right;
+				width: 40%;
 			}
 
-			.message {
+				#upload {
+					iframe {}
+				}
+
+			#main {
 				float: left;
+				padding: 0 1em 0 0;
 				width: 60%;
 			}
 
-			.submit {
-				float: right;
-				width: 15%;
+				#chat {}
+
+					#shoutbox {
+						.message {}
+					}
+
+					#sb_form {}
+
+						#shoutbox-input {
+							.nickname {
+								float: left;
+								margin: 0 1em 0 0;
+								width: 20%;
+							}
+
+							.message {
+								float: left;
+								margin: 0 1em 0 0;
+								width: 60%;
+							}
+							
+							.button {
+								float: right;
+								margin: 0;
+								width: 15%;
+							}
+						}
+
+						#shoutbox_options {
+							label {}
+							.bg-black {}
+							.bg-blue {}
+							.bg-green {}
+							.bg-orange {}
+							.bg-red {}
+						}
+
+		footer {}
+
+			.to-top {
+				display: none;
 			}
+
+		.container {
+			margin: 0 auto;
+			max-width: 1280px;
+			width: 90%;
 		}
 
-	.to-top {
-		display: none;
-	}
+		.list {
+			table {
+				.m, 
+				.s, 
+				.t {
+					display: table-cell;
+				}
+			}
+		}
 }
