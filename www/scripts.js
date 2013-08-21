@@ -44,16 +44,14 @@ $(document).ready(function() {
         $('#welcome').slideUp();
     });
 
-    // Detects window size 
-    // Creating solutions for non-existent problems?
-    // $(window).resize(function() {
-    //     if ($(this).width() > 799 ) {
-    //         $('#top-nav').show();
-    //         $('#menu-icon').removeClass('rotate');
-    //     } else {
-    //         $('#top-nav').hide();
-    //     }
-    // });
+    // Detects window size
+    $(window).resize(function() {
+        if ($('#menu-icon').is(':visible')) {
+            $('#top-nav').hide();
+        } else {
+            $('#top-nav').show();
+        }
+    });
     
 
     // smooth scrolling for internal links
