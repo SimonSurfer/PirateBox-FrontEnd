@@ -8,10 +8,6 @@
 @import 'fonts';
 
 //----------------[ Mobile ]
-* {
-	@include transitions(all, 0.50s, ease-in-out);
-}
-
 html {}
 
 	body {
