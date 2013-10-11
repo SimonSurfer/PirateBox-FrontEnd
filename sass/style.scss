@@ -53,6 +53,7 @@ html {}
 				
 				#thanks {
 					float: right;
+					margin: 0;
 				}
 
 			#sidebar {}
@@ -146,7 +147,6 @@ html {}
 			background: $dark-gray;
 			border: 0;
 			color: $white;
-			@include marpad(0, 1em);
 		}
 
 			.button:active {
