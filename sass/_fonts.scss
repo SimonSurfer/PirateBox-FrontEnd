@@ -64,12 +64,12 @@ footer {
 		color: $dark-gray;
 	}
 
-	name{
+	name {
 		font-size: .75em;
 		font-weight: bold;
 	}
 
-	data{
+	data {
 		font-size: .75em;
 	}
 }
@@ -93,6 +93,9 @@ footer {
 
 //----------------[ Desktop ]
 @media screen and (min-width: 801px) { 
-#top-nav a {
+.message {
+	data {
+		font-size: 1em;
 	}
+}
 }

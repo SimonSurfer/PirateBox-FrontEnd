@@ -53,6 +53,7 @@ html {}
 				
 				#thanks {
 					float: right;
+					margin: 0;
 				}
 
 			#sidebar {}
@@ -146,7 +147,6 @@ html {}
 			background: $dark-gray;
 			border: 0;
 			color: $white;
-			@include marpad(0, 1em);
 		}
 
 			.button:active {
@@ -159,12 +159,12 @@ html {}
 			background: $white;
 			border-radius: $radius;
 			@include box-shadow($dark-gray 0px 3px 0px);
-			@include marpad(0 0 1em, 1em);
+			@include marpad(0 0 1em, .5em);
 		}
 
 		.container {
 			height: 100%;
-			padding: 1em;
+			padding: .5em;
 			width: 100%;
 		}
 
@@ -283,9 +283,14 @@ html {}
 				display: none;
 			}
 
+		.card {
+			padding: 1em
+		}
+
 		.container {
 			margin: 0 auto;
 			max-width: 1280px;
+			padding: 1em;
 			width: 90%;
 		}
 

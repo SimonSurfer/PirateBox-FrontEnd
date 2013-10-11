@@ -124,6 +124,11 @@ footer {
   color: #ff8040;
 }
 
+@media screen and (min-width: 801px) {
+  .message data {
+    font-size: 1em;
+  }
+}
 body {
   background: #e7e9ea;
 }
@@ -169,6 +174,7 @@ header img, footer img {
 
 #thanks {
   float: right;
+  margin: 0;
 }
 
 #upload iframe {
@@ -242,8 +248,6 @@ input[type=radio] {
   background: #979ea1;
   border: 0;
   color: white;
-  margin: 0;
-  padding: 1em;
 }
 
 .button:active {
@@ -261,12 +265,12 @@ input[type=radio] {
   -moz-box-shadow: #979ea1 0px 3px 0px;
   box-shadow: #979ea1 0px 3px 0px;
   margin: 0 0 1em;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 .container {
   height: 100%;
-  padding: 1em;
+  padding: .5em;
   width: 100%;
 }
 
@@ -341,9 +345,14 @@ input[type=radio] {
     display: none;
   }
 
+  .card {
+    padding: 1em;
+  }
+
   .container {
     margin: 0 auto;
     max-width: 1280px;
+    padding: 1em;
     width: 90%;
   }
 
