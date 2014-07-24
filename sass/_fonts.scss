@@ -23,79 +23,19 @@ h3 {
 }
 
 p {
-	@include font(1em, normal, 1.5em, 0 0 1em);
+	@include font(1em, normal, auto, 0 0 1em);
 }
 
-a {
-	color: $red;
-	text-decoration: none;
+header {
+	color: white;
 }
 
-a:hover {
-	text-decoration: underline;
+.tool {
+	font-size: 1.5em;
+	padding: .25em;
+	text-align: center;
 }
 
-	.current {
-		color: $white;
-	}
-
-	#top-nav a {
-		display: block;
-		@include font(1.5em, normal, 1.5em, 0);
-	}
-
-input {
-	font-size: .75em;
-}
-
-label {
-	color: $white;
-	font-size: .75em;
-}
-
-footer {
-	color: $gray;
-}
-
-//-------- Chat Message
-.message {
-	date {
-		font-size: .625em;
-		color: $dark-gray;
-	}
-
-	name {
-		font-size: .75em;
-		font-weight: bold;
-	}
-
-	data {
-		font-size: .75em;
-	}
-}
-
-//-------- Chat Colors
-.red { 
-	color: $chat-red; 
-}
-
-.green { 
-	color: $chat-green; 
-}
-
-.blue { 
-	color: $chat-blue; 
-}
-
-.orange { 
-	color: $chat-orange; 
-}
-
-//----------------[ Desktop ]
-@media screen and (min-width: 801px) { 
-.message {
-	data {
-		font-size: 1em;
-	}
-}
+nav li {
+	text-align: center;
 }

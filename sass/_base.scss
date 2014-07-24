@@ -50,33 +50,12 @@ $radius:		3px;
 	transition: $what $time $tween;
 }
 
-//----------------[ Reset ]
+// Reset All The Things!
 * {
 	overflow: auto;
+	margin: 0;
+	padding: 0;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-html,body,div,object,iframe,fieldset {
-	border: 0;
-}
-
-ol,ul {
-	list-style: none;
-}
-
-table {
-	border-spacing: 0;
-	border-collapse: collapse;
-}
-
-header,footer,nav,section,article,hgroup,figure {
-	display: block;
-}
-
-legend {
-	display: none;
 }

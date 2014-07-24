@@ -1,6 +1,11 @@
 $(document).ready(function() {
-   	// do stuff when DOM is ready
-   	$.get('forum.html', function(data) {
+    // do stuff when DOM is ready
+   	//quick populate of shoutbox for testing
+    for (i = 0; i <= 35; i++) {
+        $('.shoutbox_content').append('<div class="message"><div class="avatar"><img src="" width="24px"></div><div class="info"><name>PirateBox</name><date>00:00:00</date></div><div class="data"><data>Chat and share files anonymously! Click <span class="icon fi-pencil"></span> or <span class="icon fi-upload"></span> to get started!</data></div></div>')
+    };
+
+    $.get('forum.html', function(data) {
         $('div#forum_link').html(data);
     });
    	
@@ -25,9 +30,19 @@ $(document).ready(function() {
     display_shoutbox();
 
     // Spin menu icon and toggle nav
-    $('#menu-icon').click(function() {
+    $('#nav-toggle').click(function() {
         $(this).toggleClass('rotate');
-        $('#top-nav').slideToggle();
+        $('#nav').slideToggle();
+    });
+
+    $('#post-toggle').click(function() {
+        $(this).toggleClass('rotate');
+        $('#post').slideToggle();
+    });
+
+    $('#upload-toggle').click(function() {
+        $(this).toggleClass('rotate');
+        $('#upload').slideToggle();
     });
 
     // Closes the mobile nav
