@@ -1,4 +1,4 @@
-# This branch is currently broken. Please dont' try to use in a live PirateBox
+# This branch is currently broken. Please don't try to use in a live PirateBox
 
 # PirateBox-Responsive
 
