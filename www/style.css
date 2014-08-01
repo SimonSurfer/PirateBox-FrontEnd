@@ -44,15 +44,22 @@ p {
 header {
   color: white;
 }
-
-.tool {
+header #tools .tool {
   font-size: 1.5em;
   padding: .25em;
   text-align: center;
 }
 
-nav li {
+nav ul li {
   text-align: center;
+}
+
+#content .shoutbox_content .message .info name {
+  font-weight: bold;
+}
+#content .shoutbox_content .message .info date {
+  color: #979ea1;
+  font-size: .75em;
 }
 
 .bubble {
@@ -105,17 +112,23 @@ nav ul li {
   float: left;
   padding: 0 .5em 0 0;
 }
+#content .shoutbox_content .message .info {
+  padding: 0 0 .5em;
+}
+#content .shoutbox_content .message .info date {
+  float: right;
+}
 
 .bubble {
   background: #ad000b;
   border-radius: 50%;
+  bottom: -3em;
   height: 2em;
   padding: .5em;
-  width: 2em;
-  z-index: 1;
   position: fixed;
   right: 1em;
-  bottom: -3em;
+  width: 2em;
+  z-index: 1;
   -webkit-transition: all, 0.5s, ease-in-out;
   -moz-transition: all, 0.5s, ease-in-out;
   -o-transition: all, 0.5s, ease-in-out;
@@ -123,9 +136,9 @@ nav ul li {
 }
 
 .on {
+  bottom: 1em;
   position: fixed;
   right: 1em;
-  bottom: 1em;
   -webkit-transition: all, 0.5s, ease-in-out;
   -moz-transition: all, 0.5s, ease-in-out;
   -o-transition: all, 0.5s, ease-in-out;

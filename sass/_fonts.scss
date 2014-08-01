@@ -26,22 +26,61 @@ p {
 	@include font(1em, normal, auto, 0 0 1em);
 }
 
-header {
-	color: $white;
-}
+html {}
 
-.tool {
-	font-size: 1.5em;
-	padding: .25em;
-	text-align: center;
-}
+	body {}
 
-nav li {
-	text-align: center;
-}
+		header {
+			color: $white;
+			#brand {
+				img {}
+			}
 
-.bubble {
-	color: $white;
-	font-size: 1.5em;
-	text-align: center;
-}
+			#tools {
+				.tool {
+					font-size: 1.5em;
+					padding: .25em;
+					text-align: center;
+					a {}
+					.text {}
+				}
+			}
+		}
+		
+		nav {
+			ul {
+				li {
+					text-align: center;}
+			}
+		}
+
+		#content {
+			.shoutbox_content {
+				.message {
+					.avatar {}
+					.info {
+						name {
+							font-weight: bold;
+						}
+						date {
+							color: $dark-gray;
+							font-size: .75em;
+						}
+					}
+				}
+			}
+		}
+		
+		footer {}
+
+		.bubble {
+			color: $white;
+			font-size: 1.5em;
+			text-align: center;
+		}
+
+			.on {}
+
+		.inner {}
+
+		.sub {}

@@ -11,10 +11,12 @@ $(document).ready(function() {
         }
     });
 
+    
+
 
    	//quick populate of shoutbox for testing
     for (i = 0; i <= 35; i++) {
-        $('.shoutbox_content').append('<div class="message"><div class="avatar"><img src="" width="24px"></div><div class="info"><name>PirateBox</name><date>00:00:00</date></div><div class="data"><data>Chat and share files anonymously! <br/ >Click <span class="icon fi-pencil"></span> or <span class="icon fi-upload"></span> to get started!</data></div></div>')
+        $('.shoutbox_content').append('<div class="message"><div class="avatar"><img src="" width="24px"></div><div class="info"><name>PirateBox</name><date class="timeago" title="2008-07-17T09:24:17Z"></date></div><div class="data"><data>Chat and share files anonymously! <br/ >Click <span class="icon fi-pencil"></span> or <span class="icon fi-upload"></span> to get started!</data></div></div>')
     };
 
     $.get('forum.html', function(data) {
@@ -80,6 +82,8 @@ $(document).ready(function() {
         }
     });
     
+    //timeago
+    $('date.timeago').timeago();
 
     // smooth scrolling for internal links
     function filterPath(string) {

@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="icons.css">
 	<script src="jquery.min.js"></script>
+	<script src="jquery.timeago.js"></script>
 	<script src="scripts.js"></script>
 </head>
 <body>
@@ -67,9 +68,22 @@
 	<section id="content">
 		<div class="inner">
 			<div id="main">
-				<div class="shoutbox_content">
-					
-    			</div>
+				<div class="shoutbox_content" id="shoutbox"></div>
+				<form method="POST" name="psowrte" id="sb_form">
+					<div id="shoutbox-input">
+						<input class="nickname" name="name" value="Anonymous" placeholder="Nickname" type="text">
+						<input class="message" name="data" placeholder="Message..." type="text">
+						<input class="button" name="submit" value="Send" type="submit">
+					</div>
+					<div id="shoutbox-options">
+						<h3>Text Color:</h3>
+						<label for="def" class="bg-black">	<input name="color" value="def" id="def" checked="" type="radio">Default</label>
+						<label for="blue" class="bg-blue">	<input name="color" value="blue" id="blue" type="radio">Blue</label>
+						<label for="green" class="bg-green">	<input name="color" value="green" id="green" type="radio">Green</label>
+						<label for="orange" class="bg-orange">	<input name="color" value="orange" id="orange" type="radio">Orange</label>
+						<label for="red" class="bg-red">		<input name="color" value="red" id="red" type="radio">Red</label>
+					</div>
+				</form>
 			</div>
 			<div id="sidebar"></div>
 

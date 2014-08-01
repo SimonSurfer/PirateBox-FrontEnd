@@ -117,7 +117,7 @@ def prepare_line ( name, indata, color  ):
     # <div class="message">
     #     <date>00:00:00</date> <name>Nickname:</name> <data class="def">Lorem ipsum dolor sit amet</data>
     # </div>
-    content = "<div class='message'><date>" + curdate.strftime("%H:%M:%S") + "</date> <name>" + name + ":</name> <data class='" + color + "'>" + data + "</data></div>\n" 
+    content = "<div class="message"><div class="avatar"><img src="" width="24px"></div><div class="info"><name>" + name + "</name><date class="timeago" title=" + curdate.strftime("%Y-%m-%dT%H:%M:%SZ") + ">" + curdate.strftime("%Y-%m-%dT%H:%M:%SZ") + "</date></div><div class="data"><data>" + data + "</data></div></div>\n"
     return content
 
 #--------------
