@@ -74,6 +74,14 @@ html {}
 		
 		footer {}
 
+		#post-bubble {
+			right: 1em;
+		}
+
+		#to-top {
+			left: 1em;
+		}
+
 		.bubble {
 			background: $red;
 			border-radius: 50%;
@@ -81,21 +89,18 @@ html {}
 			height: 2em;
 			padding: .5em;
 			position: fixed;
-			right: 1em;
 			width: 2em;
 			z-index: 1;
-			@include transition(all, .5s, ease-in-out);
+			@include transition(all, .25s, ease-in-out);
 		}
 
 			.on {
 				bottom: 1em;
 				position: fixed;
-				right: 1em;
-				@include transition(all, .5s, ease-in-out);
+				@include transition(all, .25s, ease-in-out);
 			}
 
-		.inner {
-		}
+		.inner {}
 
 		.sub {
 			clear: both;

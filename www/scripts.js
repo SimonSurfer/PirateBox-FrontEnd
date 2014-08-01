@@ -1,22 +1,37 @@
 $(document).ready(function() {
     // do stuff when DOM is ready
     //watch for scrolling and show 'back-to-top'
-    $(window).scroll(function(){
-        if($(window).scrollTop() > 20) {
-            $('#post-bubble').addClass('on');
-        }
-        else if($(window).scrollTop() <= 20){
+    // $(window).scroll(function(){
+    //     if ($(window).scrollTop() > 20) {
+    //         $('#post-bubble').addClass('on');
+    //         $('#to-top').addClass('on');
+    //     }
+    //     else if ($(window).scrollTop() <= 20){
 
-            $('#post-bubble').removeClass('on');
+    //         $('#post-bubble').removeClass('on');
+    //         $('#to-top').removeClass('on');
+    //     }
+    // });
+    var lastScrollTop = 0;   
+    $(window).scroll(function(event){
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop) {
+            $('#post-bubble').addClass('on');
+            $('#to-top').removeClass('on');
         }
+        else if ($(window).scrollTop() <= 20) {
+            $('#post-bubble').removeClass('on');
+            $('#to-top').removeClass('on');
+        }
+        else {
+            $('#to-top').addClass('on');
+        }
+        lastScrollTop = st;
     });
 
-    
-
-
-   	//quick populate of shoutbox for testing
-    for (i = 0; i <= 35; i++) {
-        $('.shoutbox_content').append('<div class="message"><div class="avatar"><img src="" width="24px"></div><div class="info"><name>PirateBox</name><date class="timeago" title="2008-07-17T09:24:17Z"></date></div><div class="data"><data>Chat and share files anonymously! <br/ >Click <span class="icon fi-pencil"></span> or <span class="icon fi-upload"></span> to get started!</data></div></div>')
+    //quick populate of shoutbox for testing
+    for (i = 0; i <= 15; i++) {
+        $('.shoutbox_content').append('<div class="message"><div class="avatar"><img src="" width="24px"></div><div class="info"><name>PirateBox</name><date class="timeago" title="2014-08-01 19:38:00"></date></div><div class="data"><data>Chat and share files anonymously! <br/ >Click <span class="icon fi-pencil"></span> or <span class="icon fi-upload"></span> to get started!</data></div></div>')
     };
 
     $.get('forum.html', function(data) {
@@ -41,7 +56,7 @@ $(document).ready(function() {
 	    post_shoutbox();
     });
 
-    display_shoutbox();
+    //display_shoutbox();
 
     // Spin menu icon and toggle nav
     $('#nav-toggle').click(function() {

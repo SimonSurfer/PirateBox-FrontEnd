@@ -119,6 +119,14 @@ nav ul li {
   float: right;
 }
 
+#post-bubble {
+  right: 1em;
+}
+
+#to-top {
+  left: 1em;
+}
+
 .bubble {
   background: #ad000b;
   border-radius: 50%;
@@ -126,23 +134,21 @@ nav ul li {
   height: 2em;
   padding: .5em;
   position: fixed;
-  right: 1em;
   width: 2em;
   z-index: 1;
-  -webkit-transition: all, 0.5s, ease-in-out;
-  -moz-transition: all, 0.5s, ease-in-out;
-  -o-transition: all, 0.5s, ease-in-out;
-  transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.25s, ease-in-out;
+  -moz-transition: all, 0.25s, ease-in-out;
+  -o-transition: all, 0.25s, ease-in-out;
+  transition: all, 0.25s, ease-in-out;
 }
 
 .on {
   bottom: 1em;
   position: fixed;
-  right: 1em;
-  -webkit-transition: all, 0.5s, ease-in-out;
-  -moz-transition: all, 0.5s, ease-in-out;
-  -o-transition: all, 0.5s, ease-in-out;
-  transition: all, 0.5s, ease-in-out;
+  -webkit-transition: all, 0.25s, ease-in-out;
+  -moz-transition: all, 0.25s, ease-in-out;
+  -o-transition: all, 0.25s, ease-in-out;
+  transition: all, 0.25s, ease-in-out;
 }
 
 .sub {
