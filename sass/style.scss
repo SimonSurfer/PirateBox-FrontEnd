@@ -14,10 +14,10 @@ html {}
 
 		header {
 			background: $black;
-			position: fixed;
-			top: 0;
-			right: 0;
-			left: 0;
+			// position: fixed;
+			// top: 0;
+			// right: 0;
+			// left: 0;
 			#brand {
 				float: left;
 				padding: .5em;
@@ -55,12 +55,13 @@ html {}
 		}
 
 		#content {
-			padding-top: 3em;
+			// padding-top: 3em;
 			.shoutbox_content {
 				.message {
 					border-bottom: $border;
 					padding: .5em;
 					.avatar {
+						display: none;
 						float: left;
 						padding: 0 .5em 0 0;
 					}
@@ -69,6 +70,29 @@ html {}
 		}
 		
 		footer {}
+
+		.bubble {
+			background: $red;
+			border-radius: 50%;
+			height: 2em;
+			padding: .5em;
+			width: 2em;
+			z-index: 1;
+				position: fixed;
+				right: 1em;
+				bottom: -3em;
+				@include transition(all, .5s, ease-in-out);
+		}
+
+			.on {
+				position: fixed;
+				right: 1em;
+				bottom: 1em;
+				@include transition(all, .5s, ease-in-out);
+			}
+
+			.off {
+			}
 
 		.inner {
 		}

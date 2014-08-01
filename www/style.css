@@ -55,12 +55,14 @@ nav li {
   text-align: center;
 }
 
+.bubble {
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+}
+
 header {
   background: #1b1d1e;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
 }
 header #brand {
   float: left;
@@ -94,16 +96,40 @@ nav ul li {
   width: 33.333333%;
 }
 
-#content {
-  padding-top: 3em;
-}
 #content .shoutbox_content .message {
   border-bottom: 1px solid #979ea1;
   padding: .5em;
 }
 #content .shoutbox_content .message .avatar {
+  display: none;
   float: left;
   padding: 0 .5em 0 0;
+}
+
+.bubble {
+  background: #ad000b;
+  border-radius: 50%;
+  height: 2em;
+  padding: .5em;
+  width: 2em;
+  z-index: 1;
+  position: fixed;
+  right: 1em;
+  bottom: -3em;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
+}
+
+.on {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  -webkit-transition: all, 0.5s, ease-in-out;
+  -moz-transition: all, 0.5s, ease-in-out;
+  -o-transition: all, 0.5s, ease-in-out;
+  transition: all, 0.5s, ease-in-out;
 }
 
 .sub {

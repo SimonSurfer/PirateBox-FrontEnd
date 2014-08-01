@@ -1,8 +1,20 @@
 $(document).ready(function() {
     // do stuff when DOM is ready
+    //watch for scrolling and show 'back-to-top'
+    $(window).scroll(function(){
+        if($(window).scrollTop() > 20) {
+            $('#post-bubble').addClass('on');
+        }
+        else if($(window).scrollTop() <= 20){
+
+            $('#post-bubble').removeClass('on');
+        }
+    });
+
+
    	//quick populate of shoutbox for testing
     for (i = 0; i <= 35; i++) {
-        $('.shoutbox_content').append('<div class="message"><div class="avatar"><img src="" width="24px"></div><div class="info"><name>PirateBox</name><date>00:00:00</date></div><div class="data"><data>Chat and share files anonymously! Click <span class="icon fi-pencil"></span> or <span class="icon fi-upload"></span> to get started!</data></div></div>')
+        $('.shoutbox_content').append('<div class="message"><div class="avatar"><img src="" width="24px"></div><div class="info"><name>PirateBox</name><date>00:00:00</date></div><div class="data"><data>Chat and share files anonymously! <br/ >Click <span class="icon fi-pencil"></span> or <span class="icon fi-upload"></span> to get started!</data></div></div>')
     };
 
     $.get('forum.html', function(data) {
