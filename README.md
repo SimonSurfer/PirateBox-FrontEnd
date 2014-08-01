@@ -1,3 +1,5 @@
+# This branch is currently broken. Please dont' try to use in a live PirateBox
+
 # PirateBox-Responsive
 
 Responsive layout to use with your [PirateBox](http://daviddarts.com/piratebox/) that updates the look of both your index, and file list pages.
