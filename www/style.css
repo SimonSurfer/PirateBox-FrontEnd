@@ -62,6 +62,10 @@ nav ul li {
   font-size: .75em;
 }
 
+footer {
+  color: white;
+}
+
 .bubble {
   color: white;
   font-size: 1.5em;
@@ -70,6 +74,10 @@ nav ul li {
 
 header {
   background: #1b1d1e;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
 }
 header #brand {
   float: left;
@@ -103,12 +111,17 @@ nav ul li {
   width: 33.333333%;
 }
 
+#content {
+  padding-top: 2.5em;
+}
 #content .shoutbox_content .message {
   border-bottom: 1px solid #979ea1;
   padding: .5em;
 }
+#content .shoutbox_content .message:last-child {
+  border-bottom: none;
+}
 #content .shoutbox_content .message .avatar {
-  display: none;
   float: left;
   padding: 0 .5em 0 0;
 }
@@ -119,12 +132,15 @@ nav ul li {
   float: right;
 }
 
-#post-bubble {
-  right: 1em;
+footer {
+  background: #1b1d1e;
+}
+footer .inner {
+  padding: .5em;
 }
 
 #to-top {
-  left: 1em;
+  right: 1em;
 }
 
 .bubble {
@@ -144,7 +160,6 @@ nav ul li {
 
 .on {
   bottom: 1em;
-  position: fixed;
   -webkit-transition: all, 0.25s, ease-in-out;
   -moz-transition: all, 0.25s, ease-in-out;
   -o-transition: all, 0.25s, ease-in-out;

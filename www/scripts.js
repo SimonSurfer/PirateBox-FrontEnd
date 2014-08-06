@@ -1,17 +1,5 @@
 $(document).ready(function() {
     // do stuff when DOM is ready
-    //watch for scrolling and show 'back-to-top'
-    // $(window).scroll(function(){
-    //     if ($(window).scrollTop() > 20) {
-    //         $('#post-bubble').addClass('on');
-    //         $('#to-top').addClass('on');
-    //     }
-    //     else if ($(window).scrollTop() <= 20){
-
-    //         $('#post-bubble').removeClass('on');
-    //         $('#to-top').removeClass('on');
-    //     }
-    // });
     var lastScrollTop = 0;   
     $(window).scroll(function(event){
         var st = $(this).scrollTop();
@@ -31,7 +19,7 @@ $(document).ready(function() {
 
     //quick populate of shoutbox for testing
     for (i = 0; i <= 15; i++) {
-        $('.shoutbox_content').append('<div class="message"><div class="avatar"><img src="" width="24px"></div><div class="info"><name>PirateBox</name><date class="timeago" title="2014-08-01 19:38:00"></date></div><div class="data"><data>Chat and share files anonymously! <br/ >Click <span class="icon fi-pencil"></span> or <span class="icon fi-upload"></span> to get started!</data></div></div>')
+        $('.shoutbox_content').append('<div class="message"><div class="avatar">' + i + '</div><div class="info"><name>' + i + '</name><date class="timeago" title="2014-08-01 19:38:00"></date></div><div class="data"><data>Chat and share files anonymously! <br/ >Click <span class="icon fi-pencil"></span> or <span class="icon fi-upload"></span> to get started!</data></div></div>')
     };
 
     $.get('forum.html', function(data) {
@@ -146,20 +134,24 @@ $(document).ready(function() {
         }
         return [];
     }
+
+    identicons();
+    
+    $('.avatar').identicon5();
 });
 
-function refresh_shoutbox () {
+function refresh_shoutbox() {
     $.get('chat_content.html', function(data) {
    		$('div#shoutbox').html(data);
    	});
 }
   
-function refresh_time_sb () {
+function refresh_time_sb() {
     // Refresh rate in milli seconds
     mytime=setTimeout('display_shoutbox()', 10000);
 }
 
-function post_shoutbox () {
+function post_shoutbox() {
 	$.post("/cgi-bin/psowrte.py" , $("#sb_form").serialize())
 	.success(function() { 
 		refresh_shoutbox(); 
@@ -174,4 +166,12 @@ function display_shoutbox() {
 
 function fnGetDomain(url) {
 	return url.match(/:\/\/(.[^/]+)/)[1];
+}
+
+function identicons() {
+    $('.avatar').each(function() {
+        var tohash = $(this).html();
+        var hashed = $.md5(tohash);
+        $(this).html(hashed);
+    });
 }
