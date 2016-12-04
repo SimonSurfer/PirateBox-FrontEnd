@@ -20,7 +20,7 @@ table {
   border-collapse: collapse;
 }
 
-header, footer, footer, nav, section, article, hgroup, figure {
+header, footer, nav, section, article, hgroup, figure {
   display: block;
 }
 
@@ -96,6 +96,12 @@ footer {
   color: #e7e9ea;
 }
 
+.counter {
+  color: #979ea1;
+  font-size: .8em;
+  text-align: right;
+}
+
 .message date {
   font-size: .625em;
   color: #979ea1;
@@ -133,10 +139,12 @@ body {
   background: #e7e9ea;
 }
 
-header, footer {
+header {
   background: #1b1d1e;
+  position: fixed;
+  width: 100%;
 }
-header img, footer img {
+header img {
   vertical-align: bottom;
 }
 
@@ -155,10 +163,9 @@ header img, footer img {
 }
 
 .rotate {
-  -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -172,9 +179,17 @@ header img, footer img {
   padding: 1em 0 0 0;
 }
 
+#content {
+  margin: 4.5em 0 0 0;
+}
+
 #thanks {
   float: right;
   margin: 0;
+}
+
+#sidebar {
+  display: none;
 }
 
 #upload iframe {
@@ -184,21 +199,13 @@ header img, footer img {
 }
 
 #shoutbox {
-  height: 350px;
+  height: auto;
   overflow: auto;
   width: 100%;
-  border: 1px solid #979ea1;
-  border-radius: 3px;
   margin: 0 0 1em;
-  padding: 0.5em;
-}
-#shoutbox .message {
-  margin: 0 0 .25em 0;
+  padding: 0em;
 }
 
-#shoutbox-input {
-  margin: 0 0 1em 0;
-}
 #shoutbox-input .nickname,
 #shoutbox-input .message,
 #shoutbox-input .button {
@@ -231,6 +238,10 @@ header img, footer img {
   background: red;
 }
 
+footer {
+  display: none;
+}
+
 input {
   height: 3em;
   border: 1px solid #979ea1;
@@ -244,6 +255,13 @@ input[type=radio] {
   margin: 0 .5em 0 0;
 }
 
+textarea {
+  border: 1px solid #979ea1;
+  border-radius: 3px;
+  margin: 0 0 1em;
+  padding: 0.5em;
+}
+
 .button {
   background: #979ea1;
   border: 0;
@@ -253,16 +271,16 @@ input[type=radio] {
 .button:active {
   background: #7c8589;
   color: #cccccc;
-  -webkit-box-shadow: #4b5154 0px -3px 0px inset;
   -moz-box-shadow: #4b5154 0px -3px 0px inset;
+  -webkit-box-shadow: #4b5154 0px -3px 0px inset;
   box-shadow: #4b5154 0px -3px 0px inset;
 }
 
 .card {
   background: white;
   border-radius: 3px;
-  -webkit-box-shadow: #979ea1 0px 3px 0px;
   -moz-box-shadow: #979ea1 0px 3px 0px;
+  -webkit-box-shadow: #979ea1 0px 3px 0px;
   box-shadow: #979ea1 0px 3px 0px;
   margin: 0 0 1em;
   padding: 0.5em;
@@ -291,6 +309,14 @@ input[type=radio] {
   display: none;
 }
 
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
 @media screen and (min-width: 801px) {
   #logo {
     margin: 0 2em 0 0;
@@ -315,7 +341,9 @@ input[type=radio] {
   }
 
   #sidebar {
-    float: right;
+    display: block;
+    left: 59%;
+    position: fixed;
     width: 40%;
   }
 
@@ -325,23 +353,27 @@ input[type=radio] {
     width: 60%;
   }
 
+  #shoutbox-input .message {
+    width: 100%;
+  }
+  #shoutbox-input .counter {
+    margin: 0 0 1em;
+    width: 100%;
+  }
   #shoutbox-input .nickname {
     float: left;
-    margin: 0 1em 0 0;
     width: 20%;
-  }
-  #shoutbox-input .message {
-    float: left;
-    margin: 0 1em 0 0;
-    width: 60%;
   }
   #shoutbox-input .button {
     float: right;
-    margin: 0;
-    width: 15%;
+    width: 12%;
   }
 
   .to-top {
+    display: none;
+  }
+
+  #fab {
     display: none;
   }
 

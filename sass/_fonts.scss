@@ -57,6 +57,12 @@ footer {
 	color: $gray;
 }
 
+.counter {
+	color: $dark-gray;
+	font-size: .8em;
+	text-align: right;
+}
+
 //-------- Chat Message
 .message {
 	date {
@@ -75,24 +81,24 @@ footer {
 }
 
 //-------- Chat Colors
-.red { 
-	color: $chat-red; 
+.red {
+	color: $chat-red;
 }
 
-.green { 
-	color: $chat-green; 
+.green {
+	color: $chat-green;
 }
 
-.blue { 
-	color: $chat-blue; 
+.blue {
+	color: $chat-blue;
 }
 
-.orange { 
-	color: $chat-orange; 
+.orange {
+	color: $chat-orange;
 }
 
 //----------------[ Desktop ]
-@media screen and (min-width: 801px) { 
+@media screen and (min-width: 801px) {
 .message {
 	data {
 		font-size: 1em;
