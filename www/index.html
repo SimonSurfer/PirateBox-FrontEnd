@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
@@ -7,159 +8,127 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/fab.css">
 	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.timeago.js"></script>
+	<script src="js/jquery.identicon5.min.js"></script>
 	<script src="js/jquery.fab.min.js"></script>
+	<script src="js/md5.js"></script>
 	<script src="js/scripts.js"></script>
 </head>
+
 <body>
-
-<header id="header">
-	<div class="container">
-		<div id="logo">
-			<h1>
-				<a href="/">
-					<img src="img/piratebox-logo-horizontal-white.png" alt="PirateBox" title="PirateBox - Share Freely">
-				</a>
-			</h1>
+	<!-- top nav bar -->
+	<header id="header">
+		<div class="container">
+			<div id="logo">
+				<h1><a href="/"><img src="img/piratebox-logo-horizontal-white.png" alt="PirateBox" title="PirateBox - Share Freely"></a></h1>
+			</div>
+			<div id="menu-icon"><img src="img/menu.png" alt="Menu"></div>
+			<nav id="top-nav">
+				<ul>
+					<li><a href="/Shared/">Files</a></li>
+					<li><a href="#about">About</a></li>
+				</ul>
+			</nav>
 		</div>
-		<div id="menu-icon"><img src="img/menu.png" alt="Menu"></div>
-		<nav id="top-nav">
-			<ul>
-				<li><a href="/Shared/">Files</a></li>
-				<li><a href="#about">About</a></li>
-			</ul>
-		</nav>
-	</div>
-</header>
+	</header>
 
-<section id="content">
-	<div class="container">
-		<div id="sidebar">
-			<div id="write" class="card">
-				<form method="POST" name="psowrte" id="sb_form" >
-					<div id="shoutbox-input">
-						<textarea class="message" type="text" name="data" maxlength="140" rows="4" placeholder="Message..."></textarea>
-						<div class="counter"></div>
-						<input class="nickname" type="text" name="name" value="Anonymous" placeholder="Nickname">
-						<input class="button" type="submit" name="submit" value="Send">
+	<!-- content container -->
+	<section id="content">
+		<div class="container">
+			<!-- sidebar content -->
+			<div id="sidebar">
+				<!-- write -->
+				<div id="write" class="card">
+					<form method="POST" name="psowrte" id="sb_form" >
+						<div id="shoutbox-input">
+							<textarea class="message" type="text" name="data" maxlength="140" rows="4" placeholder="Message..."></textarea>
+							<div class="counter"></div>
+							<input class="nickname" type="text" name="name" value="Anonymous" placeholder="Nickname">
+							<input class="button" type="submit" name="submit" value="Send">
+						</div>
+					</form>
+				</div>
+
+				<!-- upload -->
+				<div id="upload" class="card">
+					<h2>Upload</h2>
+					<iframe width="100%" height="80" src='http://piratebox.lan:8080'>
+						Your browser does not support iframes.. If you want to upload something, follow this <a href='http://piratebox.lan:8080'>Link</a>.
+					</iframe>
+					<h3><a href="/Shared">Browse Files -></a></h3>
+				</div>
+
+				<!-- about -->
+				<div id="about" class="card">
+					<h2>About PirateBox</h2>
+					<p>Inspired by pirate radio and the free culture movment, PirateBox is a self-contained mobile collaboration and file sharing device. PirateBox utilizes Free, Libre and Open Source software (FLOSS) to create mobile wireless file sharing networks where users can anonymously share images, video, audio, documents, and other digital content.</p>
+					<p>PirateBox is designed to be safe and secure. No logins are required and no user data is logged. The system is purposely not connected to the Internet in order to prevent tracking and preserve user privacy.</p>
+					<small>PirateBox is licensed under GPLv3.</small>
+				</div>
+			</div>
+
+			<!-- main content -->
+			<div id="main">
+				<!-- feed -->
+				<div id="chat">
+					<div id="shoutbox" class="shoutbox_content card">
+						<!-- just some example chats for testing -->
+
 					</div>
-				</form>
-			</div>
-
-			<div id="upload" class="card">
-				<h2>Upload</h2>
-				<iframe width="100%" height="80" src='http://piratebox.lan:8080'>
-					Your browser does not support iframes.. If you want to upload something, follow this <a href='http://piratebox.lan:8080'>Link</a>.
-				</iframe>
-				<h3><a href="/Shared">Browse Files -></a></h3>
-			</div>
-		</div>
-
-		<div id="main">
-			<div id="chat">
-				<div id="shoutbox" class="shoutbox_content">
-					<!-- just some example chats for testing -->
-					<div class="message card">
-				  	<date>00:00:00</date> <name>Nickname:</name> <data class="def">Lorem ipsum dolor sit amet</data>
-				  </div>
-					<div class="message card">
-				  	<date>00:00:00</date> <name>Nickname:</name> <data class="def">Lorem ipsum dolor sit amet</data>
-				  </div>
-					<div class="message card">
-				  	<date>00:00:00</date> <name>Nickname:</name> <data class="def">Lorem ipsum dolor sit amet</data>
-				  </div>
-					<div class="message card">
-				  	<date>00:00:00</date> <name>Nickname:</name> <data class="def">Lorem ipsum dolor sit amet</data>
-				  </div>
-					<div class="message card">
-				  	<date>00:00:00</date> <name>Nickname:</name> <data class="def">Lorem ipsum dolor sit amet</data>
-				  </div>
-					<div class="message card">
-				  	<date>00:00:00</date> <name>Nickname:</name> <data class="def">Lorem ipsum dolor sit amet</data>
-				  </div>
-					<div class="message card">
-				  	<date>00:00:00</date> <name>Nickname:</name> <data class="def">Lorem ipsum dolor sit amet</data>
-				  </div>
-					<div class="message card">
-				  	<date>00:00:00</date> <name>Nickname:</name> <data class="def">Lorem ipsum dolor sit amet</data>
-				  </div>
-					<div class="message card">
-				  	<date>00:00:00</date> <name>Nickname:</name> <data class="def">Lorem ipsum dolor sit amet</data>
-				  </div>
-					<div class="message card">
-				  	<date>00:00:00</date> <name>Nickname:</name> <data class="def">Lorem ipsum dolor sit amet</data>
-				  </div>
-					<div class="message card">
-				  	<date>00:00:00</date> <name>Nickname:</name> <data class="def">Lorem ipsum dolor sit amet</data>
-				  </div>
-					<div class="message card">
-				  	<date>00:00:00</date> <name>Nickname:</name> <data class="def">Lorem ipsum dolor sit amet</data>
-				  </div>
-					<div class="message card">
-				  	<date>00:00:00</date> <name>Nickname:</name> <data class="def">Lorem ipsum dolor sit amet</data>
-				  </div>
-					<div class="message card">
-				  	<date>00:00:00</date> <name>Nickname:</name> <data class="def">Lorem ipsum dolor sit amet</data>
-				  </div>
-					<div class="message card">
-				  	<date>00:00:00</date> <name>Nickname:</name> <data class="def">Lorem ipsum dolor sit amet</data>
-				  </div>
-					<div class="message card">
-				  	<date>00:00:00</date> <name>Nickname:</name> <data class="def">Lorem ipsum dolor sit amet</data>
-				  </div>
 				</div>
 			</div>
 		</div>
+	</section>
+
+	<!-- floating action button -->
+	<div id="fab"></div>
+
+	<!-- modals -->
+	<!-- welcome -->
+	<div id="modal-welcome" class="modal">
+		<div class="card">
+			<h2>Welcome</h2>
+			<p>Now, first of all, there is nothing illegal or scary going on here. This is a social place where you can chat and share files with people around you, <strong>anonymously</strong>! This is an off-line network, specially designed and developed for file-sharing and chat services. Staying off the grid is a precaution to maintain your full anonymity. Please have fun, chat with people, and feel free to share any files you may like.</p>
+			<button class="button" type="submit">Thanks</button>
+		</div>
 	</div>
-</section>
 
-<!-- floating action button -->
-<div id="fab"></div>
-
-<!-- modals -->
-<!-- welcome -->
-<div id="welcome" class="modal">
-	<div class="card">
-		<h2>Welcome</h2>
-		<p>Now, first of all, there is nothing illegal or scary going on here. This is a social place where you can chat and share files with people around you, <strong>anonymously</strong>! This is an off-line network, specially designed and developed for file-sharing and chat services. Staying off the grid is a precaution to maintain your full anonymity. Please have fun, chat with people, and feel free to share any files you may like.</p>
-		<input id="thanks" class="button" type="submit" value="Thanks">
+	<!-- write -->
+	<div id="modal-write" class="modal">
+		<div class="card">
+			<form method="POST" name="psowrte" id="sb_form" >
+				<div id="shoutbox-input">
+					<textarea class="message" type="text" name="data" maxlength="140" rows="4" placeholder="Message..."></textarea>
+					<div class="counter"></div>
+					<input class="nickname" type="text" name="name" value="Anonymous" placeholder="Nickname">
+					<button class="button" type="submit" name="submit">Send</button>
+				</div>
+			</form>
+		</div>
 	</div>
-</div>
 
-<!-- write -->
-<div id="write" class="modal">
-	<div class="card">
-		<form method="POST" name="psowrte" id="sb_form" >
-			<div id="shoutbox-input">
-				<textarea class="message" type="text" name="data" maxlength="140" rows="4" placeholder="Message..."></textarea>
-				<div class="counter"></div>
-				<input class="nickname" type="text" name="name" value="Anonymous" placeholder="Nickname">
-				<input class="button" type="submit" name="submit" value="Send">
-			</div>
+	<!-- upload -->
+	<div id="modal-upload" class="modal">
+		<div class="card">
+			<h2>Upload</h2>
+			<iframe width="100%" height="80" src='http://piratebox.lan:8080'>
+				Your browser does not support iframes.. If you want to upload something, follow this <a href='http://piratebox.lan:8080'>Link</a>.
+			</iframe>
+			<h3><a href="/Shared">Browse Files -></a></h3>
+		</div>
 	</div>
-</div>
 
-<!-- upload -->
-<div id="upload" class="modal">
-	<div class="card">
-		<h2>Upload</h2>
-		<iframe width="100%" height="80" src='http://piratebox.lan:8080'>
-			Your browser does not support iframes.. If you want to upload something, follow this <a href='http://piratebox.lan:8080'>Link</a>.
-		</iframe>
-		<h3><a href="/Shared">Browse Files -></a></h3>
-	</div>
-</div>
-
-<footer id="about">
-	<div class="container">
-		<!-- shh
-		<p class="to-top"><a href="#header">Back to top</a></p>
-		<h2>About PirateBox</h2>
-		<p>Inspired by pirate radio and the free culture movment, PirateBox is a self-contained mobile collaboration and file sharing device. PirateBox utilizes Free, Libre and Open Source software (FLOSS) to create mobile wireless file sharing networks where users can anonymously share images, video, audio, documents, and other digital content.</p>
-		<p>PirateBox is designed to be safe and secure. No logins are required and no user data is logged. The system is purposely not connected to the Internet in order to prevent tracking and preserve user privacy.</p>
-		<small>PirateBox is licensed under GPLv3.</small>
-		-->
-	</div>
-</footer>
-
+	<footer id="about">
+		<div class="container">
+			<!-- shh
+			<p class="to-top"><a href="#header">Back to top</a></p>
+			<h2>About PirateBox</h2>
+			<p>Inspired by pirate radio and the free culture movment, PirateBox is a self-contained mobile collaboration and file sharing device. PirateBox utilizes Free, Libre and Open Source software (FLOSS) to create mobile wireless file sharing networks where users can anonymously share images, video, audio, documents, and other digital content.</p>
+			<p>PirateBox is designed to be safe and secure. No logins are required and no user data is logged. The system is purposely not connected to the Internet in order to prevent tracking and preserve user privacy.</p>
+			<small>PirateBox is licensed under GPLv3.</small>
+			-->
+		</div>
+	</footer>
 </body>
+
 </html>

@@ -144,13 +144,13 @@ header {
   position: fixed;
   width: 100%;
 }
-header img {
-  vertical-align: bottom;
-}
 
 #logo {
   float: left;
   overflow: hidden;
+}
+#logo img {
+  vertical-align: bottom;
 }
 
 #menu-icon {
@@ -163,10 +163,10 @@ header img {
 }
 
 .rotate {
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
@@ -183,7 +183,7 @@ header img {
   margin: 4.5em 0 0 0;
 }
 
-#thanks {
+#welcome .button {
   float: right;
   margin: 0;
 }
@@ -205,6 +205,24 @@ header img {
   margin: 0 0 1em;
   padding: 0em;
 }
+#shoutbox .message {
+  border-bottom: 1px dashed #979ea1;
+  margin: 0 0 0;
+  padding: 1em;
+}
+#shoutbox .message:last-child {
+  border-bottom: none;
+}
+#shoutbox .message .identicon {
+  float: left;
+  margin: 0 .5em 0 0;
+}
+#shoutbox .message .message-info {
+  display: block;
+}
+#shoutbox .message .message-data {
+  clear: both;
+}
 
 #shoutbox-input .nickname,
 #shoutbox-input .message,
@@ -221,21 +239,6 @@ header img {
 }
 #shoutbox-options label input {
   margin: 0 .5em 0 0;
-}
-#shoutbox-options .bg-black {
-  background: #1b1d1e;
-}
-#shoutbox-options .bg-blue {
-  background: blue;
-}
-#shoutbox-options .bg-green {
-  background: green;
-}
-#shoutbox-options .bg-orange {
-  background: #ff8040;
-}
-#shoutbox-options .bg-red {
-  background: red;
 }
 
 footer {
@@ -310,87 +313,10 @@ textarea {
 }
 
 .modal {
+  display: none;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-}
-
-@media screen and (min-width: 801px) {
-  #logo {
-    margin: 0 2em 0 0;
-  }
-
-  #menu-icon {
-    display: none;
-  }
-
-  #top-nav {
-    clear: none;
-    display: table-cell;
-    padding: 0;
-    vertical-align: middle;
-  }
-  #top-nav ul li {
-    float: left;
-  }
-  #top-nav ul li a {
-    margin: 0 1em 0 0;
-    padding: 0;
-  }
-
-  #sidebar {
-    display: block;
-    left: 59%;
-    position: fixed;
-    width: 40%;
-  }
-
-  #main {
-    float: left;
-    padding: 0 1em 0 0;
-    width: 60%;
-  }
-
-  #shoutbox-input .message {
-    width: 100%;
-  }
-  #shoutbox-input .counter {
-    margin: 0 0 1em;
-    width: 100%;
-  }
-  #shoutbox-input .nickname {
-    float: left;
-    width: 20%;
-  }
-  #shoutbox-input .button {
-    float: right;
-    width: 12%;
-  }
-
-  .to-top {
-    display: none;
-  }
-
-  #fab {
-    display: none;
-  }
-
-  .card {
-    padding: 1em;
-  }
-
-  .container {
-    margin: 0 auto;
-    max-width: 1280px;
-    padding: 1em;
-    width: 90%;
-  }
-
-  .list table .m,
-  .list table .s,
-  .list table .t {
-    display: table-cell;
-  }
 }
